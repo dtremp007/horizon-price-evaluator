@@ -10,7 +10,7 @@ export const middleware = async (req: NextRequest) => {
   const { user } = session;
 
   if (!user) {
-    return NextResponse.redirect(new URL("/login", req.url));
+    return NextResponse.redirect(new URL("/", req.url));
   }
 };
 

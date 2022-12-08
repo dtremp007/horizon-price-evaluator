@@ -1,9 +1,12 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
+import AdminDashboard from "../components/layouts/AdminDashboard";
+import useUser from "../lib/auth/useUser";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
+  const { user } = useUser();
 
   return (
     <>
@@ -22,9 +25,22 @@ export default function App(props: AppProps) {
         theme={{
           /** Put your mantine theme override here */
           colorScheme: "dark",
+          components: {
+            Flex: {
+                defaultProps: {
+                    gap: 18
+                }
+            }
+        },
         }}
       >
-        <Component {...pageProps} />
+        {user ? (
+          <AdminDashboard>
+            <Component {...pageProps} />
+          </AdminDashboard>
+        ) : (
+          <Component {...pageProps} />
+        )}
       </MantineProvider>
     </>
   );

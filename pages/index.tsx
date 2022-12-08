@@ -1,9 +1,30 @@
-import { Button, Group } from "@mantine/core";
+import { LoginForm } from "../components/auth/Login";
+import { withIronSessionSsr } from "iron-session/next";
+import { sessionOptions, User } from "../lib/auth/session";
 
 export default function IndexPage() {
-  return (
-    <Group mt={50} position="center">
-      <Button size="xl">Welcome to Mantine!</Button>
-    </Group>
-  );
+  return <LoginForm />;
 }
+
+export const getServerSideProps = withIronSessionSsr(function ({
+  req,
+  res,
+}) {
+  const user = req.session.user;
+
+  if (user) {
+    res.setHeader("location", "/dashboard");
+    res.statusCode = 302;
+    res.end();
+    return {
+      props: {
+        user: req.session.user,
+      },
+    };
+  }
+
+  return {
+    props: {user: {} as User},
+  };
+},
+sessionOptions);
