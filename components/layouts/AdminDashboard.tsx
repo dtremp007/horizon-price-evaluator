@@ -9,6 +9,7 @@ import {
   MediaQuery,
   Burger,
   useMantineTheme,
+  Button,
 } from "@mantine/core";
 import useUser from "../../lib/auth/useUser";
 import MainMenu from "../menu/MainMenu";
@@ -18,7 +19,7 @@ type AdminDashboardProps = {
 };
 
 export default function AdminDashboard({ children }: AdminDashboardProps) {
-  const { user, mutateUser } = useUser();
+  const [fullScreen, setFullScreen] = useState(false);
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
   return (
@@ -40,16 +41,16 @@ export default function AdminDashboard({ children }: AdminDashboardProps) {
           hidden={!opened}
           width={{ sm: 200, lg: 300 }}
         >
-            <MainMenu/>
+          <MainMenu />
         </Navbar>
       }
-      aside={
-        <MediaQuery smallerThan="sm" styles={{ display: "none" }}>
-          <Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 300 }}>
-            <Text>Application sidebar</Text>
-          </Aside>
-        </MediaQuery>
-      }
+      //   aside={
+      //     <MediaQuery smallerThan="sm" styles={{ display: "none" }}>
+      //       <Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 300 }}>
+      //         <Text>Application sidebar</Text>
+      //       </Aside>
+      //     </MediaQuery>
+      //   }
       footer={
         <Footer height={60} p="md">
           Application footer
@@ -69,11 +70,11 @@ export default function AdminDashboard({ children }: AdminDashboardProps) {
                 mr="xl"
               />
             </MediaQuery>
-
-            <Text>Application header</Text>
+            <Button onClick={() => setFullScreen(true)}>Fullscreen</Button>
           </div>
         </Header>
       }
+      hidden={fullScreen}
     >
       {children}
     </AppShell>
