@@ -6,33 +6,47 @@ import { parseSpreadsheet } from "../../lib/spreadsheet/parse-spreadsheet";
 import { Listing } from "../../lib/types/listings";
 import MapView from "../../src/map/MapView";
 import { getSheetIdFromLink } from "../../lib/spreadsheet/get-sheet-id";
-import { Code, List, Title } from "@mantine/core";
+import { Code, List, Text, Title } from "@mantine/core";
+import { transformHeader } from "../../lib/spreadsheet/transform-header";
+import useFilterContext from "../../src/listings/filter-context/FilterContext";
+import { useEffect } from "react";
 
 type DashboardProps = {
   listings: Listing[];
   error?: string;
 };
 
-export default function Dashboard({ listings }: DashboardProps) {
+export default function Dashboard({ listings, error }: DashboardProps) {
+  const { category, setAvailableCategories } = useFilterContext();
+
+  useEffect(() => {
+    if (
+      listings &&
+      listings.length > 0 &&
+      listings[0].category &&
+      setAvailableCategories
+    ) {
+      const categories = listings.map((listing) => listing.category);
+      setAvailableCategories(Array.from(new Set(categories)).concat("ALL"));
+    }
+  }, []);
+
   return (
     <>
       {listings && listings.length > 0 ? (
-        <MapView listings={listings} />
+        <MapView
+          listings={listings.filter((listing) => {
+            if (category === "ALL" || !listing.category || !category) {
+              return true;
+            } else {
+              return listing.category === category;
+            }
+          })}
+        />
       ) : (
         <div>
           <Title>There are no listings to display</Title>
-          <List>
-            <List.Item>
-              Make sure you input a spreadsheet link in the settings page.
-            </List.Item>
-            <List.Item>
-              Make sure you input a range in the settings page.
-            </List.Item>
-            <List.Item>
-              Make the following email an editor of the spreadsheet:
-            </List.Item>
-          </List>
-          <Code>{process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL}</Code>
+          <Text>{error}</Text>
         </div>
       )}
     </>
@@ -44,12 +58,24 @@ export const getServerSideProps: GetServerSideProps = async (
 ) => {
   const auth = await getAuthToken();
   const sheets = google.sheets({ version: "v4", auth });
-  console.log(ctx.req.cookies);
 
-  const range = ctx.req.cookies.range || "Sheet2!A1:G";
-  const spreadsheetId =
-    getSheetIdFromLink(ctx.req.cookies.spreadsheetLink) ||
-    process.env.GOOGLE_SHEET_ID!;
+  const spreadsheetId = getSheetIdFromLink(ctx.req.cookies.spreadsheetLink);
+  const range = ctx.req.cookies.range;
+
+  if (!spreadsheetId) {
+    return {
+      props: {
+        listings: [],
+        error: "Go into settings and provide a spreadsheet and a range.",
+      },
+    };
+  }
+
+  if (!range) {
+    return {
+      props: { listings: [], error: "No range provided" },
+    };
+  }
 
   try {
     const response = await sheets.spreadsheets.values.get({
@@ -57,21 +83,20 @@ export const getServerSideProps: GetServerSideProps = async (
       range,
     });
 
-    // const data = response.data.values;
-    const listings = parseSpreadsheet(response.data.values || [[]]);
+    const listings = parseSpreadsheet(response.data.values, transformHeader);
 
     return {
       props: { listings },
     };
   } catch (error) {
     if (error instanceof Error) {
-        return {
-            props: { listings: [], error: error.message },
-        }
-    } else  {
-        return {
-            props: { listings: [], error: "Unknown error" },
-        }
+      return {
+        props: { listings: [], error: error.message },
+      };
+    } else {
+      return {
+        props: { listings: [], error: "Unknown error" },
+      };
     }
   }
 };

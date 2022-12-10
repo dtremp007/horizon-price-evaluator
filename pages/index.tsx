@@ -9,6 +9,7 @@ export default function IndexPage() {
 export const getServerSideProps = withIronSessionSsr(function ({
   req,
   res,
+  query,
 }) {
   const user = req.session.user;
 
@@ -22,6 +23,12 @@ export const getServerSideProps = withIronSessionSsr(function ({
       },
     };
   }
+
+  console.log("query", query)
+
+    if (query["spreadsheetLink"] && query["range"]) {
+        res.setHeader("Set-Cookie", `spreadsheetLink=${query["spreadsheetLink"]}; range=${query["range"]};Expires=Wed, 01 Jan 2025 07:28:00 GMT;`)
+    }
 
   return {
     props: {user: {} as User},

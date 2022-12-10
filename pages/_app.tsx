@@ -3,10 +3,13 @@ import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
 import AdminDashboard from "../src/layouts/AdminDashboard";
 import useUser from "../lib/auth/useUser";
+import { Router, useRouter } from "next/router";
+import { FilterProvider } from "../src/listings/filter-context/FilterContext";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
   const { user } = useUser();
+  const router = useRouter();
 
   return (
     <>
@@ -27,17 +30,19 @@ export default function App(props: AppProps) {
           colorScheme: "dark",
           components: {
             Flex: {
-                defaultProps: {
-                    gap: 18
-                }
-            }
-        },
+              defaultProps: {
+                gap: 18,
+              },
+            },
+          },
         }}
       >
-        {user ? (
-          <AdminDashboard>
-            <Component {...pageProps} />
-          </AdminDashboard>
+        {user?.isLoggedIn && router.pathname.startsWith("/dashboard") ? (
+          <FilterProvider>
+            <AdminDashboard>
+              <Component {...pageProps} />
+            </AdminDashboard>
+          </FilterProvider>
         ) : (
           <Component {...pageProps} />
         )}

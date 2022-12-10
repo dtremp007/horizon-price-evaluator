@@ -40,14 +40,14 @@ const MapView = ({ listings }: MapViewProps) => {
   const [activeMarker, setActiveMarker] = useState(0);
 
   const points = listings.map((listing) => {
-    const { listingType, lat, lng } = listing;
+    const { lat, lng } = listing;
 
     return {
       type: "Feature",
       properties: {
         cluster: false,
-        listingId: listing.id,
-        category: listingType,
+        listingId: listing.id || Math.random(),
+        category: listing.category || "No category",
         price: listing.price,
       },
       geometry: {

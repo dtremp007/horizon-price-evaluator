@@ -14,6 +14,7 @@ export function excludeKeys<
   // loop over newObj and format the price
   for (const key in newObj) {
     if (key === "price") {
+         // @ts-ignore
       newObj[key] = convertToPrice(newObj[key] as number);
     }
   }

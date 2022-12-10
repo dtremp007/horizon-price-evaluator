@@ -2,8 +2,6 @@
 import type { IronSessionOptions } from "iron-session";
 
 export type User = {
-  id: number;
-  name: string;
   email: string;
   isLoggedIn: boolean;
 };

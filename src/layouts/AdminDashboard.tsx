@@ -10,18 +10,30 @@ import {
   Burger,
   useMantineTheme,
   Button,
+  Select,
+  Flex,
+  ActionIcon,
 } from "@mantine/core";
 import useUser from "../../lib/auth/useUser";
 import MainMenu from "../menu/MainMenu";
+import useFilterContext from "../listings/filter-context/FilterContext";
+import {
+  IconAdjustments,
+  IconAdjustmentsHorizontal,
+  IconMenu2,
+} from "@tabler/icons";
+import ListingFilters from "../listings/filters/ListingFilters";
+import { useRouter } from "next/router";
 
 type AdminDashboardProps = {
   children: React.ReactNode;
 };
 
 export default function AdminDashboard({ children }: AdminDashboardProps) {
-  const [fullScreen, setFullScreen] = useState(false);
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
+  const router = useRouter();
+
   return (
     <AppShell
       styles={{
@@ -44,23 +56,18 @@ export default function AdminDashboard({ children }: AdminDashboardProps) {
           <MainMenu />
         </Navbar>
       }
-      //   aside={
-      //     <MediaQuery smallerThan="sm" styles={{ display: "none" }}>
-      //       <Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 300 }}>
-      //         <Text>Application sidebar</Text>
-      //       </Aside>
-      //     </MediaQuery>
-      //   }
-      footer={
-        <Footer height={60} p="md">
-          Application footer
-        </Footer>
+      aside={
+        <>
+          <MediaQuery smallerThan="sm" styles={{ display: "none" }}>
+            <Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 300 }}>
+              {router.pathname === "/dashboard" ? <ListingFilters /> : null}
+            </Aside>
+          </MediaQuery>
+        </>
       }
       header={
-        <Header height={{ base: 50, md: 70 }} p="md">
-          <div
-            style={{ display: "flex", alignItems: "center", height: "100%" }}
-          >
+        <Header height={{ base: 50 }} p="md">
+          <Flex justify="space-between">
             <MediaQuery largerThan="sm" styles={{ display: "none" }}>
               <Burger
                 opened={opened}
@@ -70,11 +77,9 @@ export default function AdminDashboard({ children }: AdminDashboardProps) {
                 mr="xl"
               />
             </MediaQuery>
-            <Button onClick={() => setFullScreen(true)}>Fullscreen</Button>
-          </div>
+          </Flex>
         </Header>
       }
-      hidden={fullScreen}
     >
       {children}
     </AppShell>
