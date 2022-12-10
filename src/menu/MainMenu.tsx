@@ -55,32 +55,14 @@ const data = [
   {
     icon: <IconHome size={16} />,
     color: "red",
-    label: "Listings",
-    href: "/admin/listings",
-  },
-  {
-    icon: <IconFilter size={16} />,
-    color: "yellow",
-    label: "Filters",
-    href: "/admin/filters",
+    label: "Main",
+    href: "/dashboard",
   },
   {
     icon: <IconSettings size={16} />,
     color: "green",
     label: "Settings",
-    href: "/admin/settings",
-  },
-  {
-    icon: <IconNotebook size={16} />,
-    color: "blue",
-    label: "Pages",
-    href: "/admin/pages",
-  },
-  {
-    icon: <IconPictureInPicture size={16} />,
-    color: "red",
-    label: "Images",
-    href: "/admin/images",
+    href: "/dashboard/settings",
   },
 ];
 

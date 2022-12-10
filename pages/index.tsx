@@ -1,4 +1,4 @@
-import { LoginForm } from "../components/auth/Login";
+import { LoginForm } from "../src/auth/Login";
 import { withIronSessionSsr } from "iron-session/next";
 import { sessionOptions, User } from "../lib/auth/session";
 

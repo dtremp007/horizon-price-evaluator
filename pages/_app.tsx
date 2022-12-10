@@ -1,7 +1,7 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
-import AdminDashboard from "../components/layouts/AdminDashboard";
+import AdminDashboard from "../src/layouts/AdminDashboard";
 import useUser from "../lib/auth/useUser";
 
 export default function App(props: AppProps) {

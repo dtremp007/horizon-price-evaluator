@@ -6,6 +6,11 @@ import useSupercluster from "use-supercluster";
 import type { BBox } from "geojson";
 import { Listing } from "../../lib/types/listings";
 import { getAverageCoordinates } from "../../lib/map/get-average-coordinates";
+import ListingMarker from "./ListingMarker/ListingMarker";
+import ListingPopover from "./ListingPopover/ListingPopover";
+import { convertToPrice } from "../../lib/utils/convert-to-price";
+import { excludeKeys } from "../../lib/utils/exclude-key";
+import { Box, Button, UnstyledButton } from "@mantine/core";
 
 const MAP_INITIAL_ZOOM = 10;
 //TODO: Add constraints to how far out use can zoom using turf. Check out this page https://visgl.github.io/react-map-gl/docs/get-started/state-management
@@ -32,6 +37,7 @@ const MapView = ({ listings }: MapViewProps) => {
     longitude,
     zoom: MAP_INITIAL_ZOOM,
   });
+  const [activeMarker, setActiveMarker] = useState(0);
 
   const points = listings.map((listing) => {
     const { listingType, lat, lng } = listing;
@@ -42,6 +48,7 @@ const MapView = ({ listings }: MapViewProps) => {
         cluster: false,
         listingId: listing.id,
         category: listingType,
+        price: listing.price,
       },
       geometry: {
         type: "Point",
@@ -73,7 +80,7 @@ const MapView = ({ listings }: MapViewProps) => {
       onMove={(event: ViewStateChangeEvent) => setViewport(event.viewState)}
       {...viewport}
     >
-      {clusters.map((cluster) => {
+      {clusters.map((cluster, index) => {
         const [longitude, latitude] = cluster.geometry.coordinates;
         const { cluster: isCluster, point_count: pointCount } =
           cluster.properties;
@@ -86,17 +93,21 @@ const MapView = ({ listings }: MapViewProps) => {
               latitude={latitude}
               longitude={longitude}
             >
-              <div
-                style={{
-                  width: `${10 + (pointCount / points.length) * 20}px`,
-                  height: `${10 + (pointCount / points.length) * 20}px`,
-                  color: "white",
-                  backgroundColor: "black",
-                  borderRadius: "50%",
+              <Box
+                sx={(theme) => ({
+                  width: `${20 + (pointCount / points.length) * 20}px`,
+                  height: `${20 + (pointCount / points.length) * 20}px`,
+                  backgroundColor: theme.colors.dark[9],
+                  padding: theme.spacing.xs,
                   display: "flex",
-                  justifyContent: "center",
                   alignItems: "center",
-                }}
+                  justifyContent: "center",
+                  borderRadius: "50%",
+                  "&:hover": {
+                    cursor: "pointer",
+                    transform: "scale(1.1)",
+                  },
+                })}
                 onClick={() => {
                   const expansionZoom = Math.min(
                     supercluster.getClusterExpansionZoom(cluster.id),
@@ -110,7 +121,7 @@ const MapView = ({ listings }: MapViewProps) => {
                 }}
               >
                 {pointCount}
-              </div>
+              </Box>
             </Marker>
           );
         }
@@ -120,19 +131,16 @@ const MapView = ({ listings }: MapViewProps) => {
             key={`listing-${listingId}`}
             latitude={latitude}
             longitude={longitude}
+            onClick={() => setActiveMarker(index)}
+            style={{ zIndex: activeMarker === index ? 1 : 0 }}
           >
-            <svg
-              height={33}
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 17.89 23"
-            >
-              <g>
-                <path
-                  className={`map__location-icon`}
-                  d="M8.94,23a38.85,38.85,0,0,1-4.47-4.51C2.43,16.05,0,12.41,0,9A8.95,8.95,0,0,1,10.69.17,8.94,8.94,0,0,1,17.89,9c0,3.46-2.43,7.1-4.48,9.54A38.07,38.07,0,0,1,8.94,23Zm0-17.89a3.86,3.86,0,1,0,2.71,1.13A3.85,3.85,0,0,0,8.94,5.11Z"
-                />
-              </g>
-            </svg>
+            <ListingPopover
+              markerProps={{ text: convertToPrice(cluster.properties.price) }}
+              listing={excludeKeys(
+                listings.find((listing) => listing.id === listingId)!,
+                ["lat", "lng", "id", "coordinates"]
+              )}
+            />
           </Marker>
         );
       })}
