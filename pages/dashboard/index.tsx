@@ -56,28 +56,28 @@ export default function Dashboard({ listings, error }: DashboardProps) {
 export const getServerSideProps: GetServerSideProps = async (
   ctx: GetServerSidePropsContext
 ) => {
-  const auth = await getAuthToken();
-  const sheets = google.sheets({ version: "v4", auth });
-
-  const spreadsheetId = getSheetIdFromLink(ctx.req.cookies.spreadsheetLink);
-  const range = ctx.req.cookies.range;
-
-  if (!spreadsheetId) {
-    return {
-      props: {
-        listings: [],
-        error: "Go into settings and provide a spreadsheet and a range.",
-      },
-    };
-  }
-
-  if (!range) {
-    return {
-      props: { listings: [], error: "No range provided" },
-    };
-  }
-
   try {
+    const auth = await getAuthToken();
+    const sheets = google.sheets({ version: "v4", auth });
+
+    const spreadsheetId = getSheetIdFromLink(ctx.req.cookies.spreadsheetLink);
+    const range = ctx.req.cookies.range;
+
+    if (!spreadsheetId) {
+      return {
+        props: {
+          listings: [],
+          error: "Go into settings and provide a spreadsheet and a range.",
+        },
+      };
+    }
+
+    if (!range) {
+      return {
+        props: { listings: [], error: "No range provided" },
+      };
+    }
+
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId,
       range,
