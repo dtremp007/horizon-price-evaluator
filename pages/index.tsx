@@ -24,14 +24,16 @@ export const getServerSideProps = withIronSessionSsr(function ({
     };
   }
 
-  console.log("query", query)
 
-    if (query["spreadsheetLink"] && query["range"]) {
-        res.setHeader("Set-Cookie", `spreadsheetLink=${query["spreadsheetLink"]}; range=${query["range"]};Expires=Wed, 01 Jan 2025 07:28:00 GMT;`)
-    }
+  if (query["spreadsheetLink"] && query["range"]) {
+    res.setHeader("Set-Cookie", [
+      `spreadsheetLink=${query["spreadsheetLink"]}; Expires=Wed, 01 Jan 2025 07:28:00 GMT;`,
+      `range=${query["range"]}; Expires=Wed, 01 Jan 2025 07:28:00 GMT;`,
+    ]);
+  }
 
   return {
-    props: {user: {} as User},
+    props: { user: {} as User },
   };
 },
 sessionOptions);

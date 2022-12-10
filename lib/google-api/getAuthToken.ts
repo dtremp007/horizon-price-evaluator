@@ -14,7 +14,7 @@ export async function getAuthToken() {
     projectId: process.env.GOOGLE_PROJECT_ID,
     credentials: {
       private_key,
-      client_email: process.env.GOOGLE_CLIENT_EMAIL,
+      client_email: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL,
     },
   })
   const authToken = await auth.getClient()

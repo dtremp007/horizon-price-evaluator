@@ -12,7 +12,6 @@ export default function useUser({
   redirectIfFound = false,
 } = {}) {
   const { data: user, mutate: mutateUser, isValidating } = useSWR<User>("/api/user", fetcher, {revalidateOnMount: true});
-//   console.log(user)
 
   useEffect(() => {
     // if no redirect needed, just return (example: already on /dashboard)

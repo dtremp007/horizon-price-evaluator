@@ -78,6 +78,13 @@ const MapView = ({ listings }: MapViewProps) => {
       maxZoom={17}
       dragRotate={false}
       onMove={(event: ViewStateChangeEvent) => setViewport(event.viewState)}
+      onMouseDown={(e) => {
+        // Check if user was holding down cmd or ctrl
+        if (e.originalEvent.ctrlKey || e.originalEvent.metaKey) {
+          e.preventDefault();
+          console.log(e.lngLat);
+        }
+      }}
       {...viewport}
     >
       {clusters.map((cluster, index) => {
