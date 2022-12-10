@@ -15,7 +15,7 @@ const ClusterMarker = ({
   ...others
 }: ClusterMarkerProps) => {
   const { classes, cx } = useStyles(void 0, {
-    name: "MyComponent",
+    name: "ClusterMarker",
     classNames,
     styles,
     unstyled,

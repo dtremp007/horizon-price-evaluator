@@ -52,4 +52,6 @@ const ListingMarker = forwardRef<HTMLDivElement, ListingMarkerProps>(
   }
 );
 
+ListingMarker.displayName = "ListingMarker";
+
 export default ListingMarker;
