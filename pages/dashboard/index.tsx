@@ -10,6 +10,7 @@ import { Code, List, Text, Title } from "@mantine/core";
 import { transformHeader } from "../../lib/spreadsheet/transform-header";
 import useFilterContext from "../../src/listings/filter-context/FilterContext";
 import { useEffect } from "react";
+import { useSpotlight } from "@mantine/spotlight";
 
 type DashboardProps = {
   listings: Listing[];
@@ -18,6 +19,17 @@ type DashboardProps = {
 
 export default function Dashboard({ listings, error }: DashboardProps) {
   const { category, setAvailableCategories } = useFilterContext();
+
+//   useEffect(() => {
+//     if (spotlight && listings) {
+//       spotlight.registerActions(
+//         listings.map((listing) => ({
+//           title: listing.title,
+//           onTrigger: () => console.log(listing.title),
+//         }))
+//       );
+//     }
+//   }, []);
 
   useEffect(() => {
     if (

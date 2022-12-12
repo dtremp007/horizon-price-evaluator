@@ -1,7 +1,7 @@
 import Map, { MapRef, ViewStateChangeEvent } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { Marker } from "react-map-gl";
-import { useRef, useState, useContext, useEffect } from "react";
+import { useRef, useState, useContext, useEffect, useCallback } from "react";
 import useSupercluster from "use-supercluster";
 import type { BBox } from "geojson";
 import { Listing } from "../../lib/types/listings";
@@ -11,6 +11,7 @@ import ListingPopover from "./ListingPopover/ListingPopover";
 import { convertToPrice } from "../../lib/utils/convert-to-price";
 import { excludeKeys } from "../../lib/utils/exclude-key";
 import { Box, Button, UnstyledButton } from "@mantine/core";
+import { registerSpotlightActions, useSpotlight } from "@mantine/spotlight";
 
 const MAP_INITIAL_ZOOM = 10;
 //TODO: Add constraints to how far out use can zoom using turf. Check out this page https://visgl.github.io/react-map-gl/docs/get-started/state-management
@@ -38,6 +39,32 @@ const MapView = ({ listings }: MapViewProps) => {
     zoom: MAP_INITIAL_ZOOM,
   });
   const [activeMarker, setActiveMarker] = useState(0);
+
+  const safeEaseTo = useCallback(
+    (options: mapboxgl.EaseToOptions) => {
+      if (mapRef.current) {
+        mapRef.current.getMap().easeTo(options);
+      }
+    },
+    [mapRef.current]
+  );
+
+  useEffect(() => {
+    if (window !== undefined) {
+      registerSpotlightActions(
+        listings.map((listing, index) => ({
+          id: listing.id,
+          title: listing.title,
+          description: listing.campo || "Missing Campo",
+          onTrigger: () =>
+            safeEaseTo({
+              center: [listing.lng, listing.lat],
+              zoom: 14,
+            }),
+        }))
+      );
+    }
+  }, [listings]);
 
   const points = listings.map((listing) => {
     const { lat, lng } = listing;

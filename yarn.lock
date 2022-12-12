@@ -752,6 +752,13 @@
     "@mantine/ssr" "5.9.2"
     "@mantine/styles" "5.9.2"
 
+"@mantine/spotlight@^5.9.4":
+  version "5.9.4"
+  resolved "https://registry.yarnpkg.com/@mantine/spotlight/-/spotlight-5.9.4.tgz#a9c708852ad4984817cedc22ee6204ac40ea1431"
+  integrity sha512-hrhn3kpS0ohOlz1dwnP9aEj/7CkuYbvyYBQGWvuzkuSv5l65Td9gNHl0OR6S/TLxuG16zMYI2Xg7621a/W8XJg==
+  dependencies:
+    "@mantine/utils" "5.9.4"
+
 "@mantine/ssr@5.9.2":
   version "5.9.2"
   resolved "https://registry.yarnpkg.com/@mantine/ssr/-/ssr-5.9.2.tgz#669f79cc6fe80c8f757ed7a20f49af3e720a222e"
@@ -772,6 +779,11 @@
   version "5.9.2"
   resolved "https://registry.yarnpkg.com/@mantine/utils/-/utils-5.9.2.tgz#d8e3b980de6cd5f7059b149c12d6ce50445b11ba"
   integrity sha512-dvqqbdrK/nw4stFCXRCn38Ru12RqdWv8uzbywP5dQVCyTw8pW/Cq+T7YCWpbkFcKFea9UhOrPhBygJcjc13FgA==
+
+"@mantine/utils@5.9.4":
+  version "5.9.4"
+  resolved "https://registry.yarnpkg.com/@mantine/utils/-/utils-5.9.4.tgz#3d3b7646eabaffe6cb4b02083317cc8f9565d03e"
+  integrity sha512-NZAn30jjF52X+MFnkO3oaVgo2LPx3o/QxYlcuMkRBUTZALEXvQgrD0OyGDRgEXnfMdmkBP6rk3Pol6yXXEwU6w==
 
 "@mapbox/geojson-rewind@^0.5.2":
   version "0.5.2"

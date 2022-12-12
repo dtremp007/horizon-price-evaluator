@@ -6,4 +6,5 @@ export type Listing = {
     coordinates: string;
     lat: number;
     lng: number;
+    campo?: string;
 }

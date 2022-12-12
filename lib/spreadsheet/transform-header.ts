@@ -2,7 +2,7 @@
 // Things to look for: "lng", "lon", "long", "lat", "latitude", "longitude"
 // If the array doesn't contain any of these, throw an error
 export function transformHeader(headers: string[]): string[] {
-    const lng = headers.find((header) => header.match(/lng|lon|long/i));
+    const lng = headers.find((header) => header.match(/lng|lon|long|longitude/i));
     const lat = headers.find((header) => header.match(/lat|latitude/i));
 
     if (!lng || !lat) {

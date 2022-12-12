@@ -13,6 +13,8 @@ import {
   Select,
   Flex,
   ActionIcon,
+  TextInput,
+  Kbd,
 } from "@mantine/core";
 import useUser from "../../lib/auth/useUser";
 import MainMenu from "../menu/MainMenu";
@@ -21,9 +23,12 @@ import {
   IconAdjustments,
   IconAdjustmentsHorizontal,
   IconMenu2,
+  IconSearch,
 } from "@tabler/icons";
 import ListingFilters from "../listings/filters/ListingFilters";
 import { useRouter } from "next/router";
+import { openSpotlight } from "@mantine/spotlight";
+import { SearchControl } from "../search/SearchControl/SearchControl";
 
 type AdminDashboardProps = {
   children: React.ReactNode;
@@ -66,8 +71,8 @@ export default function AdminDashboard({ children }: AdminDashboardProps) {
         </>
       }
       header={
-        <Header height={{ base: 50 }} p="md">
-          <Flex justify="space-between">
+        <Header height={{ base: 50 }} pl="md" pr="md">
+          <Flex align="center" h="100%">
             <MediaQuery largerThan="sm" styles={{ display: "none" }}>
               <Burger
                 opened={opened}
@@ -75,6 +80,18 @@ export default function AdminDashboard({ children }: AdminDashboardProps) {
                 size="sm"
                 color={theme.colors.gray[6]}
                 mr="xl"
+              />
+            </MediaQuery>
+            <MediaQuery largerThan="sm" styles={{ display: "none" }}>
+                <ActionIcon ml="auto" onClick={() => openSpotlight()}>
+                    <IconSearch />
+                </ActionIcon>
+            </MediaQuery>
+            <MediaQuery smallerThan="sm" styles={{ display: "none" }}>
+              <SearchControl
+                ml="auto"
+                onClick={() => openSpotlight()}
+                mr="sm"
               />
             </MediaQuery>
           </Flex>

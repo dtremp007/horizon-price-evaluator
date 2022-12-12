@@ -1,0 +1,2049 @@
+{
+  "pageProps": {
+    "listings": [
+      {
+        "id": "a8cd57f1-4512-4ca4-8158-9733630357e9",
+        "title": "Lote #8108 Fracc. Harms",
+        "price": "55,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.50448733,
+        "lng": -106.9205416
+      },
+      {
+        "id": "f632ff61-385b-4966-8e4b-699cf4dbc131",
+        "title": "Lote #10112 Fracc. Harms",
+        "price": "55,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.5041521,
+        "lng": -106.9246069
+      },
+      {
+        "id": "2d83d000-dfd5-4bb3-89f9-91fa6b914189",
+        "title": "Lote #12308 Fracc. Harms",
+        "price": "55,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.50305422,
+        "lng": -106.931277
+      },
+      {
+        "id": "b9436a3b-0369-4a81-bcf7-1c9f0c8507cd",
+        "title": "Lote #235 Calle California Campo 8",
+        "price": "31,600",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.66013604,
+        "lng": -106.9211898
+      },
+      {
+        "id": "d5c23471-a843-45f4-8156-4565c48524cd",
+        "title": "Lotes en Vialidad Venezuela",
+        "price": "3,528,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.41946202,
+        "lng": -106.8978777
+      },
+      {
+        "id": "36ecc4df-ad52-450e-bb80-1a1743d8f79c",
+        "title": "Casa C. Martens Km 37 Corredor Comercial",
+        "price": "315,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.73166013,
+        "lng": -106.9230292
+      },
+      {
+        "id": "6711eac6-7ab5-4f91-b574-bf18d19792b0",
+        "title": "Lote #5 Km 24 Corredor Comercial",
+        "price": "22,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.61642213,
+        "lng": -106.910204
+      },
+      {
+        "id": "4b7ab7d2-9d5c-47a1-a6e9-81215fd10681",
+        "title": "Casa #408 Calle 15 Campo 6 1/2",
+        "price": "107,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.59503746,
+        "lng": -106.9089499
+      },
+      {
+        "id": "fdf15926-5f1a-4a42-8cb9-2f8a935bc47f",
+        "title": "Lotes Campo #70",
+        "price": "40,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 29.05703827,
+        "lng": -106.7185681
+      },
+      {
+        "id": "4c2e2465-0f0b-411f-a1ab-caea84ef08c7",
+        "title": "Cabaña en Campo 10 Villa Encinos",
+        "price": "227,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.73173167,
+        "lng": -106.9356604
+      },
+      {
+        "id": "0635b69f-2545-4b59-ba4a-a5956758a8d7",
+        "title": "Casa #2000 C. 22a y C. Sonora Col. Republica",
+        "price": "3,150,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.39394456,
+        "lng": -106.8687584
+      },
+      {
+        "id": "33f14aa5-0247-4cb4-9c32-07d37f5cf97a",
+        "title": "Granja con mancomún Campo 87",
+        "price": "95,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 29.12269006,
+        "lng": -106.7505262
+      },
+      {
+        "id": "c0583851-1ee9-48c6-88a8-0387d0d8c236",
+        "title": "Dep. Tamaño XL Golden Homes Campo 22",
+        "price": "159,548",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.48180496,
+        "lng": -106.8989417
+      },
+      {
+        "id": "805e3fa8-e539-4ff4-9255-ec033eb1bad7",
+        "title": "Casa en Fracc. Golden Country",
+        "price": "3,350,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.44779745,
+        "lng": -106.8966913
+      },
+      {
+        "id": "80fdc811-68f3-473e-a494-7821a41c6eaa",
+        "title": "Casa Bodega Campo 2A",
+        "price": "380,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.44759018,
+        "lng": -106.9257226
+      },
+      {
+        "id": "df7dd684-cbc0-445d-96ce-a3e430551951",
+        "title": "Casa No. 18 Col. El Valle",
+        "price": "150,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 30.09395831,
+        "lng": -107.3661888
+      },
+      {
+        "id": "2fe27b53-6f84-45e3-8b81-f459d6e4cb4b",
+        "title": "Casa Móvil km 18",
+        "price": "91,600",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.56237138,
+        "lng": -106.9081368
+      },
+      {
+        "id": "53e7e3f6-a0db-4a29-b933-ea55cf6f7501",
+        "title": "Dep. Tamaño Large Golden Homes Campo 22",
+        "price": "110,246",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.4758399,
+        "lng": -106.8913212
+      },
+      {
+        "id": "a070fc71-eda9-4f61-a36f-0d4ada4b6007",
+        "title": "Lote C. Berna y C. Madrid",
+        "price": "1,364,343",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.40426619,
+        "lng": -106.8472438
+      },
+      {
+        "id": "cb371a9f-7048-48f9-86fc-8cec305f0711",
+        "title": "Cabaña en Pedregales del Bosque",
+        "price": "5,000,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.38414989,
+        "lng": -106.8343211
+      },
+      {
+        "id": "3669f69e-b037-4ad9-8ba5-d5845d5b491d",
+        "title": "Lote C. Madrid y C. Atenas Fracc. Los Manzanos",
+        "price": "1,387,200",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.40494829,
+        "lng": -106.8480363
+      },
+      {
+        "id": "7d0e05a0-41d1-4b33-a2ad-0380ba7de157",
+        "title": "Lote C. Madrid y C. Paris Fracc. Los Manzanos",
+        "price": "4,042,968",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.40534321,
+        "lng": -106.8485123
+      },
+      {
+        "id": "2fe3d5e5-81b0-4295-a0d7-d30cde8930d8",
+        "title": "Casa Campo 100",
+        "price": "276,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.76834094,
+        "lng": -106.9891217
+      },
+      {
+        "id": "ba24e665-c6ef-4f32-af10-1178c53a7824",
+        "title": "Lote Mountain View #125 y #126",
+        "price": "7,900",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.7063227,
+        "lng": -107.151433
+      },
+      {
+        "id": "c62bcf6c-3ef8-46e8-a6ce-622defe23a83",
+        "title": "Departamentos Encino Loft  Chihuahua Chih.",
+        "price": "1,860,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.67082208,
+        "lng": -106.0938406
+      },
+      {
+        "id": "632ab7b3-5451-46d9-be36-c5684faae714",
+        "title": "Casa #27 Campo 116 1/2 Col. Swift Current",
+        "price": "210,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.67093072,
+        "lng": -106.9859099
+      },
+      {
+        "id": "6de35e4b-fcb0-4f75-841c-2d8b918eaddd",
+        "title": "Lote #66 C. Girasol  Km 12 Corredor Comercial",
+        "price": "26,400",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.50599565,
+        "lng": -106.9238374
+      },
+      {
+        "id": "8b12e0db-c407-414f-b509-846dc7cb241a",
+        "title": "Lote #50 C. Girasol Km 12",
+        "price": "29,500",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.50625125,
+        "lng": -106.9228797
+      },
+      {
+        "id": "a289ae47-f27c-4d7e-b8ab-452fecae104b",
+        "title": "Lote km 5 Corredor Comercial y Lib.  Gómez Morin",
+        "price": "3,550,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.44103209,
+        "lng": -106.9121313
+      },
+      {
+        "id": "b8b5ec68-077f-45fd-a5de-32f9b3eeb77c",
+        "title": "Lote #8  Campo 4",
+        "price": "17,500",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.52430457,
+        "lng": -106.9427713
+      },
+      {
+        "id": "ff8a676d-7d9e-454e-a603-2e02d768b706",
+        "title": "Lotes C. del Rosal Campo 22",
+        "price": "55,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.48258427,
+        "lng": -106.8984046
+      },
+      {
+        "id": "7e818dcb-ab44-41f0-b752-4072645b90e3",
+        "title": "Casa Bodega #22 Calle Country Lot Km #8.5",
+        "price": "280,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.47794003,
+        "lng": -106.9050237
+      },
+      {
+        "id": "727810d7-cc21-4b27-b6ed-71fa1cf9c5fa",
+        "title": "Lote #58 C. Thiessen Campo 8",
+        "price": "37,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.67188565,
+        "lng": -106.8950072
+      },
+      {
+        "id": "592478be-d0fe-4988-a169-ee358210312b",
+        "title": "Casa #151 City Side Campo 22",
+        "price": "280,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.47593495,
+        "lng": -106.8905822
+      },
+      {
+        "id": "771e06d4-639c-463d-a6b6-1f0155f650bb",
+        "title": "Lote #004 C. Américas Campo #8",
+        "price": "35,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.65454965,
+        "lng": -106.9157428
+      },
+      {
+        "id": "4b35dd2e-1e92-4579-a4c8-0c28cc6bbbce",
+        "title": "Casa Bodega Calle Peters Km 16",
+        "price": "310,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.54993947,
+        "lng": -106.9178184
+      },
+      {
+        "id": "0caf4106-a54a-41d4-a41b-4668de72c605",
+        "title": "Lote #202 C. Guerrero Campo #8",
+        "price": "35,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.65981765,
+        "lng": -106.9205495
+      },
+      {
+        "id": "b70ce42b-df5a-4d88-a892-fef3b026a8c6",
+        "title": "Casa #399 Campo 6 1/2",
+        "price": "135,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.59497498,
+        "lng": -106.9072189
+      },
+      {
+        "id": "ccd7196e-2624-462d-8cda-0cd8cac42754",
+        "title": "Lote Calle 15 Campo 6 1/2 Km 22",
+        "price": "30,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.59480961,
+        "lng": -106.9063515
+      },
+      {
+        "id": "111b46d1-a2c5-4c59-b89d-c68c08b052f9",
+        "title": "Lote con Bodega en Campo 6 1/2",
+        "price": "42,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.57351309,
+        "lng": -106.9060045
+      },
+      {
+        "id": "f1d23b70-04d8-430a-bbb4-64a9b3963d0b",
+        "title": "Casa Calle California Campo 8",
+        "price": "170,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.66017435,
+        "lng": -106.9246476
+      },
+      {
+        "id": "437b91e2-5a84-41ee-baff-d162c3c881ca",
+        "title": "Casa Calle Central Campo 22 Km 8",
+        "price": "400,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.47355626,
+        "lng": -106.904074
+      },
+      {
+        "id": "10a6fd10-7a13-4c31-8cd6-853e9b9299bb",
+        "title": "Casa móvil lakota by Mckenzie modelo 1999",
+        "price": "12,500",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.71344124,
+        "lng": -106.9089167
+      },
+      {
+        "id": "dffa976c-4793-4a77-b7e1-3e388d3075f8",
+        "title": "Casa Bodega y cabaña Calle Montana Campo 8",
+        "price": "425,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.66554247,
+        "lng": -106.9075788
+      },
+      {
+        "id": "67a5d8ef-17ee-4288-a0e2-bf55325822ca",
+        "title": "Bodega #74 C. Santa Fe km 28 Corredor Comercial",
+        "price": "198,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.65979359,
+        "lng": -106.9030553
+      },
+      {
+        "id": "84e06ca4-850e-468c-b700-b3cfa0264961",
+        "title": "Casa Bodega Calle Rempel Campo 2B",
+        "price": "290,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.47815589,
+        "lng": -106.9251632
+      },
+      {
+        "id": "d9eb5994-2ccb-4ecf-9122-a8ceb3995796",
+        "title": "Lote #D24 Calle #9 Campo 6 1/2",
+        "price": "24,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.58866693,
+        "lng": -106.8958545
+      },
+      {
+        "id": "b6fe030b-ef11-486c-aaca-d11d6427a1a9",
+        "title": "Casa en Fracc. San Antonio",
+        "price": "6,800,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.41289009,
+        "lng": -106.8574637
+      },
+      {
+        "id": "67f8d048-c04c-4e26-9165-160c0a1b5cf2",
+        "title": "Dep. #207 Mediano Golden Home",
+        "price": "81,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.48200352,
+        "lng": -106.8980427
+      },
+      {
+        "id": "d8fe6490-64d5-4b65-bf57-8087a0782f3b",
+        "title": "Lote #24 C. Girasol km 12",
+        "price": "27,400",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.50560732,
+        "lng": -106.9269799
+      },
+      {
+        "id": "b7b94630-eb1d-4220-a8e0-57465fa74e27",
+        "title": "Lote #10312 Fracc. Harms",
+        "price": "52,500",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.566208,
+        "lng": -106.910026
+      },
+      {
+        "id": "27858b8b-eac1-4eee-b4b0-4e5b3218a766",
+        "title": "Lote Calle del Rosal  Campestre 2",
+        "price": "78,750",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.48377299,
+        "lng": -106.8979631
+      },
+      {
+        "id": "f03041c0-0e8c-4a51-b4dd-2d75dfcb465a",
+        "title": "Lote en Casa Colorada",
+        "price": "485,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.39652503,
+        "lng": -107.0054077
+      },
+      {
+        "id": "9e03f2e5-c188-4cc8-8cb6-ccb0fc290d7a",
+        "title": "Dep. Chico Golden Home",
+        "price": "49,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.48223875,
+        "lng": -106.898409
+      },
+      {
+        "id": "319141f0-327e-4b95-8148-0f96b6fb957d",
+        "title": "Terreno agrícola en el Llano",
+        "price": "384,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 30.23623866,
+        "lng": -107.0968928
+      },
+      {
+        "id": "57406f48-e7fd-4d87-8674-359d4cb9f4a3",
+        "title": "Lote #90 Calle 9 Campo 6 1/2",
+        "price": "26,500",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.58726846,
+        "lng": -106.8948681
+      },
+      {
+        "id": "43b45c94-8629-460e-b908-1a81bc2a2de4",
+        "title": "Lotes en campo 2A",
+        "price": "95,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.44751655,
+        "lng": -106.917904
+      },
+      {
+        "id": "259ea6d3-20cd-4da7-ab00-3058a7d60160",
+        "title": "Lote #6 Calle Rosenfarm  Campo 7e",
+        "price": "32,500",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.61371059,
+        "lng": -106.9173814
+      },
+      {
+        "id": "1f7f600e-97d3-4529-851a-1403975d7779",
+        "title": "Casa C. Guerrero Campo #8",
+        "price": "370,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.66786035,
+        "lng": -106.9257307
+      },
+      {
+        "id": "62e73e66-b73b-4f1e-87df-f351a39fbcc1",
+        "title": "Casa Col. El Valle",
+        "price": "217,500",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 30.0985152,
+        "lng": -107.3356778
+      },
+      {
+        "id": "333ff125-6f22-4caa-8ae2-12c7cd94d8dd",
+        "title": "Lote #7527  Col. Liviney Colombia",
+        "price": "45,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 4.436116764,
+        "lng": -71.78561135
+      },
+      {
+        "id": "0d6b37d6-dd8d-4c68-860d-e7c4770bdeb2",
+        "title": "Dep. Mediano Golden Home Campo 22",
+        "price": "89,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.48250908,
+        "lng": -106.8990518
+      },
+      {
+        "id": "1ce6396a-3af6-40a1-813c-4de57582d892",
+        "title": "Terrenos en Col. El Valle Bacalar Q.R.",
+        "price": "420,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 19.17839086,
+        "lng": -88.9700505
+      },
+      {
+        "id": "c503a396-f1e2-4f85-8d73-6c860a0f0e96",
+        "title": "Lote #11 Fracc. Green Apple",
+        "price": "480,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.48185682,
+        "lng": -106.8846813
+      },
+      {
+        "id": "2be236f9-bdd2-4d18-b1fa-4b283587db8c",
+        "title": "Lote Campo #106",
+        "price": "53,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.7774442,
+        "lng": -107.0283702
+      },
+      {
+        "id": "74feab74-df3e-449e-89b1-57b5f264c28d",
+        "title": "Lote #47 Fracc. Los Cedros",
+        "price": "75,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.45147666,
+        "lng": -106.9047738
+      },
+      {
+        "id": "f7983b5c-2715-43f5-b44a-daa722badfa3",
+        "title": "Lote Calle Riegos – Km 15",
+        "price": "65,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.53547374,
+        "lng": -106.9035375
+      },
+      {
+        "id": "b5c1aa46-6087-4eed-8163-5c44048ffe15",
+        "title": "Casa móvil – Campo #101",
+        "price": "115,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.77441039,
+        "lng": -107.0137081
+      },
+      {
+        "id": "4d58e234-e0e9-4d35-b35a-cee8e02d5c1c",
+        "title": "Lote #06 Campo 10.5",
+        "price": "36,750",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.71264613,
+        "lng": -106.9326602
+      },
+      {
+        "id": "febde31c-cde3-42fe-a8c4-77e5d82a48db",
+        "title": "Lotes Calle Asilo",
+        "price": "22,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.47438567,
+        "lng": -106.9268067
+      },
+      {
+        "id": "1d5e94e3-a5d9-4d04-80f7-bd4f07a5bb4c",
+        "title": "Casa Móvil  en campo 10.5",
+        "price": "36,750",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.71231157,
+        "lng": -106.9321795
+      },
+      {
+        "id": "aa770dbb-9c22-4e7a-bbb4-34e3f03514f9",
+        "title": "Lote Campo #106",
+        "price": "53,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.7774442,
+        "lng": -107.0283702
+      },
+      {
+        "id": "38926b85-3c44-4837-a53c-f83fc755d7dd",
+        "title": "Lote #47 Fracc. Los Cedros",
+        "price": "75,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.45147666,
+        "lng": -106.9047738
+      },
+      {
+        "id": "91559ca9-3ad5-4d77-9a5d-dc1c5f073517",
+        "title": "Lote Calle Riegos – Km 15",
+        "price": "65,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.53547374,
+        "lng": -106.9035375
+      },
+      {
+        "id": "6e27613a-bcc5-4709-948d-3b65237d8533",
+        "title": "Casa móvil – Campo #101",
+        "price": "115,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.77441039,
+        "lng": -107.0137081
+      },
+      {
+        "id": "da117e07-05bb-4871-8620-8f67b83a87b4",
+        "title": "Lote #06 Campo 10.5",
+        "price": "36,750",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.71264613,
+        "lng": -106.9326602
+      },
+      {
+        "id": "b265deb7-3011-4600-a2f6-96e1a188d8d7",
+        "title": "Lotes Calle Asilo",
+        "price": "22,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.47438567,
+        "lng": -106.9268067
+      },
+      {
+        "id": "39c9bb0d-b78b-41aa-92b0-a8c1cfe7e734",
+        "title": "Casa Móvil  en campo 10.5",
+        "price": "36,750",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.71231157,
+        "lng": -106.9321795
+      },
+      {
+        "id": "1b43ca46-7002-4ab6-a699-bba2cea3f93b",
+        "title": "Rancho La Estancia – Bacalar Quintana Roo",
+        "price": "900,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 19.0252947,
+        "lng": -88.84505003
+      },
+      {
+        "id": "0b179878-502e-4432-97c5-c75ba9105a70",
+        "title": "Lote #58 C. del Rosal  Campo 22",
+        "price": "45,900",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.48466073,
+        "lng": -106.8981074
+      },
+      {
+        "id": "789088fe-d6c0-47d2-bcc6-c6f078c7a8d7",
+        "title": "Casa Campo #106",
+        "price": "750,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.76435697,
+        "lng": -107.0366859
+      },
+      {
+        "id": "ac7ad7ef-317f-4cbc-89b6-09f49a441264",
+        "title": "Lotes Campo 2a",
+        "price": "24,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.45172376,
+        "lng": -106.9295549
+      },
+      {
+        "id": "9a1f9248-ff7d-4f71-934a-5dc58a6316d3",
+        "title": "Edificio en centro de Cuauhtémoc",
+        "price": "12,500,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.40499456,
+        "lng": -106.8639032
+      },
+      {
+        "id": "274bb02e-1d3c-497e-840e-785542ced5a4",
+        "title": "Lotes Campo 14",
+        "price": "16,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.6644215,
+        "lng": -106.8273582
+      },
+      {
+        "id": "0b620c42-475b-4a24-a1cb-764a06ac0c45",
+        "title": "Lotes – Villa Chalet Casa Colorada",
+        "price": "110,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.40143951,
+        "lng": -107.014088
+      },
+      {
+        "id": "d1862ca1-ac11-4ca1-9ddd-51511c64f890",
+        "title": "Casa #174 Calle Riegos Km 15",
+        "price": "165,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.53629336,
+        "lng": -106.9038621
+      },
+      {
+        "id": "dcd79db2-b71b-478a-9d80-68fb75264f53",
+        "title": "Lote #25 Calle 10 de Febrero",
+        "price": "35,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.70943982,
+        "lng": -106.9368911
+      },
+      {
+        "id": "02e41ea3-84ee-49c9-9973-b1b1d66bf806",
+        "title": "Lote #70  Campo 10",
+        "price": "60,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.73510239,
+        "lng": -106.9269343
+      },
+      {
+        "id": "0b5fc71e-5a1f-4350-a75d-a6ab61d5369b",
+        "title": "Lote #37 Campo 10",
+        "price": "38,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.74018132,
+        "lng": -106.9163704
+      },
+      {
+        "id": "b2455b17-5e49-47f8-8f26-96c732811415",
+        "title": "Bodega km 29.5 – Corredor Comercial",
+        "price": "670,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.66932011,
+        "lng": -106.9146003
+      },
+      {
+        "id": "0f92429a-0394-48e1-918b-20050c28bb40",
+        "title": "Lote #28 Campo 10",
+        "price": "45,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.73978519,
+        "lng": -106.9158447
+      },
+      {
+        "id": "149f2f8c-3676-4934-aa34-6778ac0a5f0d",
+        "title": "Lote Campo #107",
+        "price": "20,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.81274419,
+        "lng": -107.0289189
+      },
+      {
+        "id": "14bffafe-6c6a-419f-b959-f622f99de5d2",
+        "title": "Dep. Golden Homes",
+        "price": "120,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.48193227,
+        "lng": -106.8977451
+      },
+      {
+        "id": "bd618273-e9dd-4587-9734-8173fb0bee5e",
+        "title": "Lote Campo #110",
+        "price": "15,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.75430846,
+        "lng": -107.0770481
+      },
+      {
+        "id": "383f0d4c-7810-4183-a266-f7fe10f68d01",
+        "title": "Bodega Campo #101",
+        "price": "450,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.77219206,
+        "lng": -106.9976091
+      },
+      {
+        "id": "966f98f4-158e-422b-903f-0fcca7b4301d",
+        "title": "Lote Km 27",
+        "price": "38,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.64173569,
+        "lng": -106.8987643
+      },
+      {
+        "id": "63789db0-cb96-42d0-abee-33163cbbd6db",
+        "title": "Casa Fracc. Los Manzanos",
+        "price": "3,000,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.40549963,
+        "lng": -106.8475555
+      },
+      {
+        "id": "bd8c33ff-d8c4-4a32-ba38-1d2db9d30252",
+        "title": "Lote #8 Green Apple",
+        "price": "480,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.4818191,
+        "lng": -106.8842702
+      },
+      {
+        "id": "90b2c51a-a3d9-425b-891a-507eb9d35d1d",
+        "title": "Cabaña Campo 10 Villa Encinos",
+        "price": "190,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.73166771,
+        "lng": -106.9352523
+      },
+      {
+        "id": "94098927-be26-44d4-9822-b21241b559de",
+        "title": "Lotes Campo 34",
+        "price": "16,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.4081964,
+        "lng": -106.9252103
+      },
+      {
+        "id": "e51e4747-87d7-411f-b64e-2a0c2d879c26",
+        "title": "Lote Campo 10",
+        "price": "50,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.73172122,
+        "lng": -106.9324189
+      },
+      {
+        "id": "dd132d1b-d79d-4123-addd-d74a3bc70179",
+        "title": "Casa Móvil Campo #107",
+        "price": "110,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.79503015,
+        "lng": -107.0409939
+      },
+      {
+        "id": "5219204a-72b9-4271-b7a6-de8e26637acb",
+        "title": "Casa Campo #106 km 52",
+        "price": "200,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.7565999,
+        "lng": -107.035922
+      },
+      {
+        "id": "8dc8cdd5-7cf3-4120-82ca-9085ff7f630a",
+        "title": "Casa Movil 18 X 52 fts",
+        "price": "35,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.71127937,
+        "lng": -106.9366204
+      },
+      {
+        "id": "415b3a9f-aee5-400f-bf44-f0cf69b65beb",
+        "title": "Rancho Carr. Cuau. –  Chih.",
+        "price": "1,000,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.34894517,
+        "lng": -106.5716733
+      },
+      {
+        "id": "2de80b81-b954-41fb-a359-87a7b973334e",
+        "title": "Lote #33 C. California",
+        "price": "31,600",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.66055824,
+        "lng": -106.9235086
+      },
+      {
+        "id": "a3a20644-113d-4a95-b9d4-d3641b2f17ca",
+        "title": "Casa #204 Campo 2B",
+        "price": "415,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.46645955,
+        "lng": -106.9162395
+      },
+      {
+        "id": "da7680be-f1af-4bca-be0c-c82eb43f3667",
+        "title": "Terreno ctra. Chihuahua –  Cuauhtémoc",
+        "price": "6,375,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.3472196,
+        "lng": -106.577467
+      },
+      {
+        "id": "19b8724b-be1f-43d5-8e28-e72d8e641e71",
+        "title": "Lotes   #374 / #376 Rocky Montain View",
+        "price": "17,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.64841518,
+        "lng": -107.139357
+      },
+      {
+        "id": "466f806e-bdbd-4ffd-99f8-e6ca7ff7e8fc",
+        "title": "Lote # 13 Calle Rosenthal",
+        "price": "34,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.58696961,
+        "lng": -106.9194734
+      },
+      {
+        "id": "0b1d57f5-9bd3-4b3e-ab96-58acb03284c0",
+        "title": "Lotes Campo 8",
+        "price": "44,300",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.66227372,
+        "lng": -106.8994187
+      },
+      {
+        "id": "e0d9f60a-41a1-456b-a944-1fd383585e08",
+        "title": "Lote #219 -Campo 8",
+        "price": "52,700",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.64963918,
+        "lng": -106.9260263
+      },
+      {
+        "id": "b3c69745-227f-40c9-9e0d-c45625d19c04",
+        "title": "Lote #100 –  Campo 8",
+        "price": "63,200",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.65318868,
+        "lng": -106.9254521
+      },
+      {
+        "id": "6df78de4-869c-4972-a7cd-6034803ed11e",
+        "title": "Casa Calle Campo Alegre",
+        "price": "1,160,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.41796134,
+        "lng": -106.8931961
+      },
+      {
+        "id": "e9dda512-7127-424d-9f49-8e0d924e4f44",
+        "title": "Lotes #225 #227 #229 Campo 8",
+        "price": "52,700",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.64744068,
+        "lng": -106.9257206
+      },
+      {
+        "id": "d7673540-fc39-4d35-b320-cdff11a3b83b",
+        "title": "Casa C. Calle Luna Campo 22",
+        "price": "295,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.4693515,
+        "lng": -106.9002991
+      },
+      {
+        "id": "7fa4c302-e749-45cb-90ae-82e52cc56ea7",
+        "title": "Lote #309 Rocky Mountain View",
+        "price": "15,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.71046307,
+        "lng": -107.1469107
+      },
+      {
+        "id": "3f669568-8759-435d-943d-53ba04139f68",
+        "title": "Lote  #127 Av. Los Arcos",
+        "price": "58,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.52043564,
+        "lng": -106.9029808
+      },
+      {
+        "id": "30d807aa-d1c4-4839-bbfd-77597675c078",
+        "title": "Casa Campo 23 No. 114",
+        "price": "79,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.5182663,
+        "lng": -106.810206
+      },
+      {
+        "id": "772b9ecd-ff62-4c54-858a-a810e0348222",
+        "title": "Casa / Lote Campo 204",
+        "price": "37,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.5565681,
+        "lng": -107.0018155
+      },
+      {
+        "id": "6fe57365-b8d1-415e-a43c-ade1b378d27f",
+        "title": "Cabaña en Cd. Madera",
+        "price": "6,800,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 29.19053283,
+        "lng": -108.144618
+      },
+      {
+        "id": "af429f34-e727-4170-965c-1d93145bd85a",
+        "title": "Casa  Bodega Calle Harms",
+        "price": "205,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.53090463,
+        "lng": -106.898954
+      },
+      {
+        "id": "e07576d9-c8bb-4ed2-975a-65cea0b53d7f",
+        "title": "Cabaña Cerca de mirador Menonita",
+        "price": "90,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.7337533,
+        "lng": -106.91993
+      },
+      {
+        "id": "0fd53692-082b-40db-abad-317a032ed18f",
+        "title": "Casa en Campo #15",
+        "price": "125,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.62167206,
+        "lng": -106.8839694
+      },
+      {
+        "id": "4a56e0ba-af22-45a1-a0a2-a5894533ed70",
+        "title": "Lote #40 Calle Teika.",
+        "price": "37,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.50516007,
+        "lng": -106.9012189
+      },
+      {
+        "id": "6ca3de5b-6c35-48c1-bcbc-d0412d8d8be6",
+        "title": "Pre- venta Casa en construcción",
+        "price": "160,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.59537135,
+        "lng": -106.9063716
+      },
+      {
+        "id": "6046f8fb-f688-458c-95eb-2837714a43f8",
+        "title": "Casa Col. Campesina",
+        "price": "8,400,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.39363105,
+        "lng": -106.8888405
+      },
+      {
+        "id": "c051470e-786f-490e-b71f-f2b4e40ce1f6",
+        "title": "Casa móvil Fracc. Harms",
+        "price": "122,500",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.50316127,
+        "lng": -106.9252075
+      },
+      {
+        "id": "f9478acf-6242-4f9f-92f7-74eaf9b6fccb",
+        "title": "Casa Campo 34 – Calle La Villa",
+        "price": "230,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.40991094,
+        "lng": -106.9265175
+      },
+      {
+        "id": "399b4bc3-aeb2-4602-8103-4f26b68074c1",
+        "title": "Lote #112 Mountain View",
+        "price": "10,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.73615813,
+        "lng": -107.1503213
+      },
+      {
+        "id": "31b2dc53-44b3-42e9-b594-9b65190dbbfc",
+        "title": "Lotes agrícolas en Moctezuma",
+        "price": "600,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 30.20607294,
+        "lng": -106.2178765
+      },
+      {
+        "id": "370645eb-e85d-429b-bfc1-6b27809ee729",
+        "title": "Bonita casa móvil – Campo 8a",
+        "price": "94,500",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.66506027,
+        "lng": -106.9425264
+      },
+      {
+        "id": "b3ef6b4b-6257-4179-aa04-aa2b279b3c33",
+        "title": "Casa tradicional Menonita",
+        "price": "133,500",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.71467271,
+        "lng": -106.9664931
+      },
+      {
+        "id": "2334e567-683a-4355-843b-7e8283273460",
+        "title": "Terreno céntrico en Álvaro Obregón ( Rubio).",
+        "price": "137,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.7515509,
+        "lng": -106.9044013
+      },
+      {
+        "id": "ba87e4f7-5e04-453e-87c0-c2fd2a7245dd",
+        "title": "Casabodega #26 – Calle Villa Rosa – Campo 6",
+        "price": "350,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.59473019,
+        "lng": -106.9184612
+      },
+      {
+        "id": "4415d659-71e3-438b-bf1f-3ef3719be68b",
+        "title": "Casa con terreno #3426 – Km 34.5 – Corredor Comercial",
+        "price": "725,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.71260303,
+        "lng": -106.9111768
+      },
+      {
+        "id": "080ecab3-b454-4802-9be4-e6c829981f90",
+        "title": "Departamento #206 – Golden View Homes – Campo 22",
+        "price": "167,277",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.48182749,
+        "lng": -106.8974004
+      },
+      {
+        "id": "86c30bea-8066-48bd-a084-c5c228327cc1",
+        "title": "Terrenos Lotificados – Campo 51A – Santa Clara",
+        "price": "19,500",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 29.25770466,
+        "lng": -106.7873132
+      },
+      {
+        "id": "04274d67-2cd9-4fb0-8dcd-a2fa88e5398f",
+        "title": "Terreno Comercial – Periférico de la Juventud – Chihuahua",
+        "price": "13,500,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.61919986,
+        "lng": -106.1082208
+      },
+      {
+        "id": "ff8453a2-3c1d-4462-b524-21123446426c",
+        "title": "Terreno Comercial  – Periférico de la Juventud – Chihuahua",
+        "price": "1,200,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.62388051,
+        "lng": -106.1284178
+      },
+      {
+        "id": "3238f838-5829-43b1-82ab-0d33c5071361",
+        "title": "Lote #7 – Oak Hills",
+        "price": "15,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.88004068,
+        "lng": -107.0150542
+      },
+      {
+        "id": "1f0d73b0-f6d8-4559-bae1-96107f11d849",
+        "title": "Lote #13 – Campo 14",
+        "price": "14,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.64808564,
+        "lng": -106.8319774
+      },
+      {
+        "id": "e0a6172c-6e4c-49f4-beec-50713ba76751",
+        "title": "Lote #058 – Calle Belize – Campo 8",
+        "price": "35,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.65528273,
+        "lng": -106.9218643
+      },
+      {
+        "id": "ca6be152-fcde-480f-8560-c1f7b1619c8a",
+        "title": "Lote #1850 – Calle Dorado – Km 17",
+        "price": "37,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.56253759,
+        "lng": -106.930908
+      },
+      {
+        "id": "e3d742d1-691a-4aa7-af8d-7a202d784743",
+        "title": "Lote #203 – Rocky Mountain View – Campo 113",
+        "price": "10,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.74184481,
+        "lng": -107.1309042
+      },
+      {
+        "id": "7ca939cb-3154-40da-91f8-cc61fa701fb7",
+        "title": "Lote #33 – Calle Asilo – Campo 2B",
+        "price": "10,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.47046912,
+        "lng": -106.9240174
+      },
+      {
+        "id": "8520c908-190c-49df-9a45-06f0caa5b3f8",
+        "title": "#314 – Calle Bobcat – Rocky Mountain View",
+        "price": "13,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.73972351,
+        "lng": -107.1241933
+      },
+      {
+        "id": "a4344f82-ef2f-4341-b28f-81a6431611c0",
+        "title": "#312 – Calle Bobcat – Rocky Mountain View",
+        "price": "18,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.73368157,
+        "lng": -107.1430868
+      },
+      {
+        "id": "91c0742e-d4eb-45d0-b21d-e2bbd02ec229",
+        "title": "#317 – Calle Bobcat – Rocky Mountain View",
+        "price": "9,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.72512372,
+        "lng": -107.1481588
+      },
+      {
+        "id": "b8b1e812-949a-4a4e-a9db-cecae0fcefe7",
+        "title": "#265 – Calle Bobcat – Rocky Mountain View",
+        "price": "12,500",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.73393558,
+        "lng": -107.1401015
+      },
+      {
+        "id": "df44c2e7-9faf-449d-82cf-3fac21afccd1",
+        "title": "#263 – Calle Bobcat – Rocky Mountain View",
+        "price": "12,500",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.7278886,
+        "lng": -107.1534576
+      },
+      {
+        "id": "697991df-999b-49d9-98ec-9f9c706bad88",
+        "title": "#273 – Calle Bobcat – Rocky Mountain View",
+        "price": "14,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.73175532,
+        "lng": -107.137489
+      },
+      {
+        "id": "1ef98cf5-5690-4a86-835d-1908c7d4f3e7",
+        "title": "#306 – Calle Bobcat – Rocky Mountain View",
+        "price": "14,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.72137083,
+        "lng": -107.1295068
+      },
+      {
+        "id": "99c82d57-5f3c-464e-bf26-f9b4f0ee73d8",
+        "title": "#401 – Calle Rabbit – Rocky Mountain View",
+        "price": "9,500",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.72751815,
+        "lng": -107.1697587
+      },
+      {
+        "id": "37ccf5cd-83e9-4cd8-83ec-7a6a9fc42624",
+        "title": "#379 – Calle Tigre – Rocky Mountain View",
+        "price": "20,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.73658852,
+        "lng": -107.1577826
+      },
+      {
+        "id": "b124e23d-7029-46d9-ac32-7ec098a73960",
+        "title": "#372 – Calle Tigre – Rocky Mountain View",
+        "price": "12,500",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.72736291,
+        "lng": -107.1705057
+      },
+      {
+        "id": "90509b44-b88c-4ff7-8f56-1c038c8d6429",
+        "title": "#361 – Calle Tigre – Rocky Mountain View",
+        "price": "9,500",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.73607581,
+        "lng": -107.1433631
+      },
+      {
+        "id": "997aceb2-1337-45f3-9fee-9cd15e8fe669",
+        "title": "Lote – Calle Los Pinos – Km 6",
+        "price": "37,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.46450364,
+        "lng": -106.9146001
+      },
+      {
+        "id": "32ea1d8d-adde-4867-a117-4a4d9719836e",
+        "title": "#370 – Calle Tigre – Rocky Mountain View",
+        "price": "12,500",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.72694542,
+        "lng": -107.1714605
+      },
+      {
+        "id": "6875c877-6e61-46ad-ae09-ddf3a629cca1",
+        "title": "Lote #32 – Colonia Vianna – Campo 101",
+        "price": "28,350",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.77275866,
+        "lng": -107.0157918
+      },
+      {
+        "id": "500903a6-f11c-4ece-b8e7-483281ce3d09",
+        "title": "2 Lotes Juntos – Km 20 – Carretera Flores Magon – Buenaventura – Colonia El Valle",
+        "price": "21,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 30.00290717,
+        "lng": -107.2489429
+      },
+      {
+        "id": "8afc02d2-0126-494f-832f-39048bd85100",
+        "title": "Casa con Bodega y Local – Calle 9a y Emiliano Zapata Ejido – Lazaro Cardenas",
+        "price": "150,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 29.11010099,
+        "lng": -107.0150757
+      },
+      {
+        "id": "cfe9e2c3-8279-4135-9e37-4253e5fe86bf",
+        "title": "Casamovil – Colonia Valle la Esperanza – Villa Ahumada",
+        "price": "48,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 30.52851661,
+        "lng": -106.5157986
+      },
+      {
+        "id": "826b9e8e-3f0d-44f0-aae7-952feeb34ac8",
+        "title": "Lote #75 – Mountain View – Campo 113",
+        "price": "7,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.73996809,
+        "lng": -107.1839905
+      },
+      {
+        "id": "d0b0612b-24c3-40ad-8894-8c2c53648a7a",
+        "title": "Lote #113 – Mountain View – Campo 113",
+        "price": "6,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.692997,
+        "lng": -107.1908569
+      },
+      {
+        "id": "b096b6f4-313f-467d-b539-29ec40a3a398",
+        "title": "Lote – Calle Dorado – Km 17",
+        "price": "44,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.56315244,
+        "lng": -106.9230867
+      },
+      {
+        "id": "f2f654fe-b2e0-4c12-98e0-625d1c6e21b6",
+        "title": "Lote #12306 – Fraccionamento Harms – Km 11",
+        "price": "47,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.50290538,
+        "lng": -106.9275158
+      },
+      {
+        "id": "de007cfb-ccc4-4c9e-ae5f-fd7a24db262c",
+        "title": "Lote #11 – Calle Venado – Campo 72",
+        "price": "26,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 29.09399114,
+        "lng": -106.7020136
+      },
+      {
+        "id": "108e1167-5bcd-4d5b-be11-7a4d84cca574",
+        "title": "Terreno Urbano – Cuauhtémoc",
+        "price": "120,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.40553074,
+        "lng": -106.8909984
+      },
+      {
+        "id": "f6686f8a-4dfb-410c-861d-4676790be846",
+        "title": "Lote #26 – Blvd El Valle – El Valle",
+        "price": "50,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 30.08160133,
+        "lng": -107.3678948
+      },
+      {
+        "id": "b39adecb-028b-46d7-9e66-fbc2cafb6ac7",
+        "title": "Lote #48 – El Valle",
+        "price": "21,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 30.09118218,
+        "lng": -107.3420048
+      },
+      {
+        "id": "6f8bf598-d036-4502-aee0-17b238f9adaf",
+        "title": "Lotes #31 \u0026 #33 – Av. La Sierra – El Valle",
+        "price": "14,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 30.10105086,
+        "lng": -107.3372056
+      },
+      {
+        "id": "862dc643-33c8-4ed1-a6cd-43b619f87b4d",
+        "title": "Lotes #9 \u0026 #13 – El Valle",
+        "price": "21,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 30.08439151,
+        "lng": -107.3712375
+      },
+      {
+        "id": "64f42800-3d6b-494d-9ba7-f4871e1ca983",
+        "title": "City Side Residencial – Campo 22",
+        "price": "41,427",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.46610719,
+        "lng": -106.8907285
+      },
+      {
+        "id": "fafa6307-f5ee-4438-acf7-b8be03355f21",
+        "title": "Lote #10 – Calle Obregón – El Valle",
+        "price": "23,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 30.0747762,
+        "lng": -107.3487854
+      },
+      {
+        "id": "d750df83-b2ed-4ee3-a9f6-42a15a754ca6",
+        "title": "Bodega Casa y Lote Vacío- Campo 107",
+        "price": "420,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.79803293,
+        "lng": -107.034452
+      },
+      {
+        "id": "80e38016-c5c9-4ed6-9cc7-117f79925e10",
+        "title": "Golden Home Apartamentos – Calle Rosal en Campo 22 Cuauhtémoc Chihuahua",
+        "price": "81,850",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.48248499,
+        "lng": -106.8971504
+      },
+      {
+        "id": "50a9e181-cf9f-4881-a73e-d5a547098ee1",
+        "title": "Lote #59 – Mt. View‍",
+        "price": "6,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.63636279,
+        "lng": -107.2128296
+      },
+      {
+        "id": "86441bd5-1586-424b-8181-013ced48d049",
+        "title": "Lote #58 – Mt. View",
+        "price": "8,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.63515747,
+        "lng": -107.2073364
+      },
+      {
+        "id": "88bcd383-4666-4336-adb9-76503aecdc77",
+        "title": "Lote #56 – Mt. View",
+        "price": "6,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.64523273,
+        "lng": -107.2032166
+      },
+      {
+        "id": "c0e272c3-e2de-4578-8215-1d68c8edbb4d",
+        "title": "Lote #80 – Mt. View",
+        "price": "12,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.64753013,
+        "lng": -107.2032166
+      },
+      {
+        "id": "eea203b9-a535-41f1-bc5f-d7ab14fbadf6",
+        "title": "Lote #84 – Oak Hills",
+        "price": "15,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.8843832,
+        "lng": -107.0176506
+      },
+      {
+        "id": "3744e1e2-fc91-4746-bb8e-de341fcf41ad",
+        "title": "Lote – Colonia El Valle – Av. Cuauhtemoc",
+        "price": "22,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 30.09793816,
+        "lng": -107.3570251
+      },
+      {
+        "id": "976933de-1f3e-45fe-8ec0-111b9526746c",
+        "title": "Lotes #16 y #38 – Colonia El Valle",
+        "price": "42,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 30.10387863,
+        "lng": -107.3604584
+      },
+      {
+        "id": "ec565f18-9773-411a-ab84-3cc7c0b9f489",
+        "title": "Lote #10 – Colonia El Valle – Blvd El Valle",
+        "price": "58,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 30.03121798,
+        "lng": -107.2433853
+      },
+      {
+        "id": "7fa07413-6721-43ab-88cb-aa004db4d1d2",
+        "title": "Lote #115 – Campo 113 – Mountain View",
+        "price": "6,900",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.59537429,
+        "lng": -107.1860504
+      },
+      {
+        "id": "ffa0eeeb-e9b5-47dc-b82e-cda5f99717e8",
+        "title": "Lote #09 Calle Dorado Km 18",
+        "price": "15,750",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 28.56364244,
+        "lng": -106.9174862
+      },
+      {
+        "id": "5c3d1737-a89f-4971-a9f2-139c470f818a",
+        "title": "Lote #9 Km 40.5 – Campo 67.5",
+        "price": "28,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 29.03455927,
+        "lng": -106.7321777
+      },
+      {
+        "id": "4ca8e14a-bbaf-4d3f-a79d-dd87017947c6",
+        "title": "2 Lotes Rusticos de 87 hectáreas c/u – Los Reyes",
+        "price": "250,000",
+        "category": "OTHER",
+        "coordinates": 0,
+        "lat": 29.64860759,
+        "lng": -106.2693787
+      },
+      {
+        "id": "0T95fiP8QQ2YlkVPo7f0",
+        "title": "BODEGA COMERCIAL CAMPO 41",
+        "price": "103,000.00",
+        "category": "LOTES_COMERCIALES",
+        "coordinates": "28.895492, -106.765187",
+        "lat": 28.895492,
+        "lng": -106.765187
+      },
+      {
+        "id": "0uAUWuAA4rlrUODcb5lJ",
+        "title": "CASA KM. 16 CALLE 18 DE MAYO",
+        "price": "475,000.00",
+        "category": "CASA",
+        "coordinates": "28.54505, -106.90822",
+        "lat": 28.54505,
+        "lng": -106.90822
+      },
+      {
+        "id": "11LrQ3ZwKilo1PXEd9Xc",
+        "title": "LOTE #1051 EN FRACCIONAMIENTO OASIS KM 28.22",
+        "price": "69,000.00",
+        "category": "LOTES_RESIDENCIALES",
+        "coordinates": "28.6487247, -106.9179951",
+        "lat": 28.6487247,
+        "lng": -106.9179951
+      },
+      {
+        "id": "1OEzvvlWw7BjS0BZwL8k",
+        "title": "PROPIEDAD BONITA CALLE DORADO",
+        "price": "210,000.00",
+        "category": "CASA",
+        "coordinates": "28.56245, -106.92205",
+        "lat": 28.56245,
+        "lng": -106.92205
+      },
+      {
+        "id": "1RCFYCQuQJSl8U8IXn4A",
+        "title": "LOTE COLONIA MOCTEZUMA",
+        "price": "16,000.00",
+        "category": "LOTES_RESIDENCIALES",
+        "coordinates": "30.1261348, -106.2604214",
+        "lat": 30.1261348,
+        "lng": -106.2604214
+      },
+      {
+        "id": "6or456o5mGYtqo40M2oY",
+        "title": "CASA CAMPO 2A GNADENTHAL #256",
+        "price": "210,000.00",
+        "category": "CASA",
+        "coordinates": "28.448397, -106.932829",
+        "lat": 28.448397,
+        "lng": -106.932829
+      },
+      {
+        "id": "7DqAwKuUCT7TCa92kHP4",
+        "title": "LOTE CALLE ALTENHEIM CAMPO 2B",
+        "price": "10,500.00",
+        "category": "LOTES_RESIDENCIALES",
+        "coordinates": "28.4739395, -106.926715",
+        "lat": 28.4739395,
+        "lng": -106.926715
+      },
+      {
+        "id": "7KPbuUrmwJuLkKvPCRQr",
+        "title": "CASA BODEGA CALLE NOPAL KM. 11.5",
+        "price": "360,500.00",
+        "category": "BODEGA",
+        "coordinates": "28.501944, -106.901356",
+        "lat": 28.501944,
+        "lng": -106.901356
+      },
+      {
+        "id": "AFMLYwE8FqxGZShCL94d",
+        "title": "LOTE #50 CALLE ROSENTHAL",
+        "price": "44,000.00",
+        "category": "VENDIDO",
+        "coordinates": "28.5878815, -106.9232322",
+        "lat": 28.5878815,
+        "lng": -106.9232322
+      },
+      {
+        "id": "AI9D0OWTMI0XG7Xh3ow6",
+        "title": "CASA CON BODGEA KM11",
+        "price": "500,000.00",
+        "category": "CASA",
+        "coordinates": "28.49999, -106.91504",
+        "lat": 28.49999,
+        "lng": -106.91504
+      },
+      {
+        "id": "D1AR3HjPXWT0dTrXqFIi",
+        "title": "LOTE CALLE PIEDRAS CAMPO 10",
+        "price": "28,000.00",
+        "category": "VENDIDO",
+        "coordinates": "28.72667, -106.923057",
+        "lat": 28.72667,
+        "lng": -106.923057
+      },
+      {
+        "id": "DQYywCDo8JQXc0CBSwD1",
+        "title": "PREVENTA DEPARTAMENTO GRANDE GOLDEN HOMES KM. 8",
+        "price": "115,000.00",
+        "category": "APARTMENTS",
+        "coordinates": "28.48273, -106.89762",
+        "lat": 28.48273,
+        "lng": -106.89762
+      },
+      {
+        "id": "ErA5uGTMRvm8IBqU9zwg",
+        "title": "LOTE CALLE 13 CAMPO 6.5",
+        "price": "40,000.00",
+        "category": "LOTES_RESIDENCIALES",
+        "coordinates": "28.5946, -106.899",
+        "lat": 28.5946,
+        "lng": -106.899
+      },
+      {
+        "id": "FtiUKLX51r6006V7Ru2z",
+        "title": "CASA CAMPO 6 1/2 CALLE 12",
+        "price": "124,000.00",
+        "category": "CASA",
+        "coordinates": "28.59099, -106.90381",
+        "lat": 28.59099,
+        "lng": -106.90381
+      },
+      {
+        "id": "GpU74Nu4fY8f2Wje4AkA",
+        "title": "APARTAMENTO #202 GOLDEN HOMES",
+        "price": "120,000.00",
+        "category": "VENDIDO",
+        "coordinates": "28.48269, -106.89777",
+        "lat": 28.48269,
+        "lng": -106.89777
+      },
+      {
+        "id": "HCNOA6ZCmtuydgaDIEfM",
+        "title": "DEPARTAMENTOS CHICOS GOLDEN HOMES",
+        "price": "49,000.00",
+        "category": "APARTMENTS",
+        "coordinates": "28.48269, -106.89777",
+        "lat": 28.48269,
+        "lng": -106.89777
+      },
+      {
+        "id": "HbaVyIX5W5CHyy9EKOHc",
+        "title": "PROPIEDAD CAMPO 67",
+        "price": "420,000.00",
+        "category": "CASA",
+        "coordinates": "29.03144, -106.72487",
+        "lat": 29.03144,
+        "lng": -106.72487
+      },
+      {
+        "id": "LEd7ov4rKy50KbEIe4GJ",
+        "title": "LOTE CALLE MAIZALES #67",
+        "price": "43,000.00",
+        "category": "LOTES_RESIDENCIALES",
+        "coordinates": "28.63813, -106.9044",
+        "lat": 28.63813,
+        "lng": -106.9044
+      },
+      {
+        "id": "LesJeAUsXRX9DdQzsIkl",
+        "title": "CASA CALLE DORADO KM18",
+        "price": "83,000.00",
+        "category": "VENDIDO",
+        "coordinates": "28.56247, -106.92242",
+        "lat": 28.56247,
+        "lng": -106.92242
+      },
+      {
+        "id": "LwY6oXlbrcyeo5Mevfcd",
+        "title": "PROPIEDAD GRANDE CAMPO 15",
+        "price": "250,000.00",
+        "category": "CASA",
+        "coordinates": "28.61477, -106.88678",
+        "lat": 28.61477,
+        "lng": -106.88678
+      },
+      {
+        "id": "M5kRuZb4CjUURfp4M6ww",
+        "title": "LOTE #543 CALLE NOPAL KM 11.5",
+        "price": "45,000.00",
+        "category": "LOTES_RESIDENCIALES",
+        "coordinates": "28.50212, -106.90148",
+        "lat": 28.50212,
+        "lng": -106.90148
+      },
+      {
+        "id": "N6ChWfPI7YExMy5fvt2S",
+        "title": "PREVENTA DEPARTAMENTO XL GOLDEN HOMES KM. 8",
+        "price": "166,000.00",
+        "category": "APARTMENTS",
+        "coordinates": "28.48273, -106.89762",
+        "lat": 28.48273,
+        "lng": -106.89762
+      },
+      {
+        "id": "Px4dsQ79NxYq15yqqwaR",
+        "title": "DEPARTAMENTO #207 GOLDEN HOMES",
+        "price": "108,000.00",
+        "category": "APARTMENTS",
+        "coordinates": "28.48282, -106.897435",
+        "lat": 28.48282,
+        "lng": -106.897435
+      },
+      {
+        "id": "Qt7O2HTOjNNNnvx2IuyL",
+        "title": "LOTE CALLE PRINCIPAL CAMPO 102.5",
+        "price": "170,000.00",
+        "category": "LOTES_RESIDENCIALES",
+        "coordinates": "28.769329, -106.995275",
+        "lat": 28.769329,
+        "lng": -106.995275
+      },
+      {
+        "id": "SRgegemWwgfhELgLJjRb",
+        "title": "LOTE RUSTICO EJIDO MIGUEL CHIQUITO",
+        "price": "31,500.00",
+        "category": "LOTES_RESIDENCIALES",
+        "coordinates": "28.533172, -107.049834",
+        "lat": 28.533172,
+        "lng": -107.049834
+      },
+      {
+        "id": "SagQR0XdX8NlZhzxCkyO",
+        "title": "LOTE ROSENTHAL #56.A",
+        "price": "83,000.00",
+        "category": "VENDIDO",
+        "coordinates": "28.61163, -106.93161",
+        "lat": 28.61163,
+        "lng": -106.93161
+      },
+      {
+        "id": "UWrNVpk5jK5HlrPepmad",
+        "title": "LOTE CAMPO 72",
+        "price": "37,800.00",
+        "category": "LOTES_RESIDENCIALES",
+        "coordinates": "29.116355, -106.713956",
+        "lat": 29.116355,
+        "lng": -106.713956
+      },
+      {
+        "id": "UfZnhLnCSEyYsTCldHPR",
+        "title": "BODEGA PARA NEGOCIO KM 6",
+        "price": "2,500,000.00",
+        "category": "LOTES_COMERCIALES",
+        "coordinates": "28.46033, -106.9111",
+        "lat": 28.46033,
+        "lng": -106.9111
+      },
+      {
+        "id": "ZRMPJxVhHYQniHq6KmMK",
+        "title": "PRECIOSA CASA CALLE YECORA",
+        "price": "350,000.00",
+        "category": "CASA",
+        "coordinates": "28.56709, -106.91501",
+        "lat": 28.56709,
+        "lng": -106.91501
+      },
+      {
+        "id": "cJMmBYTk04XGuu12TRRY",
+        "title": "LOTE CAMPO 8",
+        "price": "71,000.00",
+        "category": "LOTES_RESIDENCIALES",
+        "coordinates": "28.65313, -106.92963",
+        "lat": 28.65313,
+        "lng": -106.92963
+      },
+      {
+        "id": "dFiJiOcPqDrfsu7yIHgU",
+        "title": "LOTE #39 CALLE DEL KM 21",
+        "price": "44,000.00",
+        "category": "VENDIDO",
+        "coordinates": "28.5874569, -106.923204",
+        "lat": 28.5874569,
+        "lng": -106.923204
+      },
+      {
+        "id": "dd4ym2uAjMyFnbwkCfyZ",
+        "title": "LOTE CALLE SANTA FE KM29",
+        "price": "80,000.00",
+        "category": "LOTES_RESIDENCIALES",
+        "coordinates": "28.6599, -106.90314",
+        "lat": 28.6599,
+        "lng": -106.90314
+      },
+      {
+        "id": "gOSVJOMRiuECZSfIEaAe",
+        "title": "LOTE CAMPO 6 1/2 CALLE 13 #11",
+        "price": "45,000.00",
+        "category": "LOTES_RESIDENCIALES",
+        "coordinates": "28.5940455, -106.905955",
+        "lat": 28.5940455,
+        "lng": -106.905955
+      },
+      {
+        "id": "nxWzmDyLskA4ftJknt9u",
+        "title": "LOTE #29 CALLE MAIZALES",
+        "price": "55,000.00",
+        "category": "LOTE",
+        "coordinates": "28.63572, -106.90708",
+        "lat": 28.63572,
+        "lng": -106.90708
+      },
+      {
+        "id": "rDNTXxJrX6WCPG0gx9w1",
+        "title": "CASA ACOGEDORA CALLE EL SOL KM. 7.5",
+        "price": "150,000.00",
+        "category": "CASA",
+        "coordinates": "28.46863, -106.90390072192378",
+        "lat": 28.46863,
+        "lng": -106.9039007
+      },
+      {
+        "id": "tb4Z1Iw9tYIHlIxcGcru",
+        "title": "LOTE CAMPO 14B #29",
+        "price": "30,000.00",
+        "category": "LOTES_RESIDENCIALES",
+        "coordinates": "28.66154, -106.8341",
+        "lat": 28.66154,
+        "lng": -106.8341
+      },
+      {
+        "id": "wjVsCmviCbh6vS7mZo2S",
+        "title": "RANCHO GRANDE EN LA PERALTA VILLA AHUMADA",
+        "price": "2,640,000.00",
+        "category": "LABORES/RANCHOS",
+        "coordinates": "30.7197668, -106.3582376",
+        "lat": 30.7197668,
+        "lng": -106.3582376
+      },
+      {
+        "id": "zql41wPcnVMKALqM7QXr",
+        "title": "LOTE #1022 EN FRACCIONAMIENTO OASIS KM 28.22",
+        "price": "69,000.00",
+        "category": "LOTES_RESIDENCIALES",
+        "coordinates": "28.652626, -106.917494",
+        "lat": 28.652626,
+        "lng": -106.917494
+      }
+    ]
+  }
+}

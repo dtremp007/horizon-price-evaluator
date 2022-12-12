@@ -5,6 +5,7 @@ import AdminDashboard from "../src/layouts/AdminDashboard";
 import useUser from "../lib/auth/useUser";
 import { Router, useRouter } from "next/router";
 import { FilterProvider } from "../src/listings/filter-context/FilterContext";
+import SpotlightProvider from "../src/search/_SpotlightProvider";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -38,11 +39,13 @@ export default function App(props: AppProps) {
         }}
       >
         {user?.isLoggedIn && router.pathname.startsWith("/dashboard") ? (
-          <FilterProvider>
-            <AdminDashboard>
-              <Component {...pageProps} />
-            </AdminDashboard>
-          </FilterProvider>
+          <SpotlightProvider>
+            <FilterProvider>
+              <AdminDashboard>
+                <Component {...pageProps} />
+              </AdminDashboard>
+            </FilterProvider>
+          </SpotlightProvider>
         ) : (
           <Component {...pageProps} />
         )}
