@@ -1,5 +1,5 @@
 export function convertToPrice(price: number | string): string {
-    if ((typeof price === 'string' && isNaN(+price.charAt(0))) || (typeof price === 'number')) {
+    if ((typeof price === 'string' && !isNaN(+price.charAt(0))) || (typeof price === 'number')) {
         return `$${price.toLocaleString()}`
     }
 

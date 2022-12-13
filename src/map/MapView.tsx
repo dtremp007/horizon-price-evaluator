@@ -12,6 +12,7 @@ import { convertToPrice } from "../../lib/utils/convert-to-price";
 import { excludeKeys } from "../../lib/utils/exclude-key";
 import { Box, Button, UnstyledButton } from "@mantine/core";
 import { registerSpotlightActions, useSpotlight } from "@mantine/spotlight";
+import getPropertyCaseInsensitive from "../../lib/utils/get-property-case-insensitive";
 
 const MAP_INITIAL_ZOOM = 10;
 //TODO: Add constraints to how far out use can zoom using turf. Check out this page https://visgl.github.io/react-map-gl/docs/get-started/state-management
@@ -54,8 +55,15 @@ const MapView = ({ listings }: MapViewProps) => {
       registerSpotlightActions(
         listings.map((listing, index) => ({
           id: listing.id,
-          title: listing.title,
-          description: listing.campo || "Missing Campo",
+          title: getPropertyCaseInsensitive(listing, "title")
+            ? getPropertyCaseInsensitive(listing, "title")
+            : `${getPropertyCaseInsensitive(listing, "type") || "Property"} ${
+                getPropertyCaseInsensitive(listing, "campo") ||
+                "at unspecified location"
+              }`,
+          description:
+            convertToPrice(getPropertyCaseInsensitive(listing, "price")) ||
+            undefined,
           onTrigger: () =>
             safeEaseTo({
               center: [listing.lng, listing.lat],
