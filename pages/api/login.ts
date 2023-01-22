@@ -1,7 +1,6 @@
 import { withIronSessionApiRoute } from "iron-session/next";
 import { NextApiRequest, NextApiResponse } from "next";
 import { sessionOptions } from "../../lib/auth/session";
-import database from "../../lib/dev_database/database.json";
 
 async function loginRoute(req: NextApiRequest, res: NextApiResponse) {
   const { email, inviteCode } = req.body;
