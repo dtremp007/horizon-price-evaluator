@@ -1,30 +1,39 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import useUser from "../../../lib/auth/useUser";
+import { useListings } from "../useListings";
+import { getCategories } from "./get-categories";
 
 export type FilterContextType = {
   category: string;
   setCategory: (category: string) => void;
   availableCategories: string[];
-  setAvailableCategories: (categories: string[]) => void;
   search: string;
   setSearch: (search: string) => void;
+    mapStyle: string;
+  setMapStyle: (mapStyle: string) => void;
 };
 
 const FilterContext = createContext<FilterContextType>({} as FilterContextType);
 
 export function FilterProvider({ children }: { children: React.ReactNode }) {
+  const { user } = useUser();
+  const {listings} = useListings(!!user);
   const [category, _setCategory] = useState<string>("ALL");
-  const [availableCategories, _setAvailableCategories] = useState<string[]>([
-    "ALL",
-  ]);
+  const [availableCategories, setAvailableCategories] = useState(getCategories(listings));
   const [search, _setSearch] = useState("");
+  const [mapStyle, _setMapStyle] = useState("mapbox://styles/mapbox/streets-v11");
+
+  useEffect(() => {
+    setAvailableCategories(getCategories(listings));
+  }, [listings]);
 
   const setCategory = (category: string) => {
     _setCategory(category);
   };
 
-  const setAvailableCategories = (categories: string[]) => {
-    _setAvailableCategories(categories);
-  };
+  const setMapStyle = (mapStyle: string) => {
+    _setMapStyle(mapStyle);
+    };
 
   const setSearch = (search: string) => {
     _setSearch(search);
@@ -36,9 +45,10 @@ export function FilterProvider({ children }: { children: React.ReactNode }) {
         category,
         setCategory,
         availableCategories,
-        setAvailableCategories,
         search,
         setSearch,
+        mapStyle,
+        setMapStyle,
       }}
     >
       {children}

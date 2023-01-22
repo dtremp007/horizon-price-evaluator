@@ -1,9 +1,16 @@
 import { Box, DefaultProps, Selectors, Text } from "@mantine/core";
-import { Marker } from "react-map-gl";
-import useStyles from "./ClusterMarker.styles";
+import { MouseEventHandler } from "react";
+import useStyles, {
+  ClusterMarkerStyles,
+  ClusterVariant,
+} from "./ClusterMarker.styles";
 
-interface ClusterMarkerProps extends DefaultProps<Selectors<typeof useStyles>> {
-  price: number;
+interface ClusterMarkerProps
+  extends DefaultProps<Selectors<typeof useStyles>, ClusterMarkerStyles> {
+  diameter: number;
+  variant: ClusterVariant;
+  label: string;
+  onClick: MouseEventHandler<HTMLDivElement>;
 }
 
 const ClusterMarker = ({
@@ -11,22 +18,26 @@ const ClusterMarker = ({
   styles,
   unstyled,
   className,
-  price,
+  diameter,
+  variant,
+  label,
+  onClick,
   ...others
 }: ClusterMarkerProps) => {
-  const { classes, cx } = useStyles(void 0, {
-    name: "ClusterMarker",
-    classNames,
-    styles,
-    unstyled,
-  });
+  const { classes, cx } = useStyles(
+    { diameter, variant },
+    {
+      name: "ClusterMarker",
+      classNames,
+      styles,
+      unstyled,
+    }
+  );
 
   return (
-    <Marker>
-      <Box className={cx(classes.root, className)} {...others}>
-        <Text>{price}</Text>
-      </Box>
-    </Marker>
+    <Box className={cx(classes.root, className)} onClick={onClick} {...others}>
+      {label}
+    </Box>
   );
 };
 

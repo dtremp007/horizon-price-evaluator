@@ -18,7 +18,7 @@ import {
 } from "@mantine/core";
 import useUser from "../../lib/auth/useUser";
 import MainMenu from "../menu/MainMenu";
-import useFilterContext from "../listings/filter-context/FilterContext";
+import useFilterContext from "../listings/filters/FilterContext";
 import {
   IconAdjustments,
   IconAdjustmentsHorizontal,

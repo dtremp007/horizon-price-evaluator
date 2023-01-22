@@ -7,11 +7,11 @@ import ListingMarker, {
 } from "../ListingMarker/ListingMarker";
 
 interface ListingPopoverProps extends DefaultProps {
+    children: React.ReactNode;
   markerProps: ListingMarkerProps;
-  listing: Partial<Listing>;
 }
 
-const ListingPopover = ({ markerProps, listing }: ListingPopoverProps) => {
+const ListingPopover = ({ children, markerProps}: ListingPopoverProps) => {
   const [opened, setOpened] = useState(false);
 
   return (
@@ -30,7 +30,7 @@ const ListingPopover = ({ markerProps, listing }: ListingPopoverProps) => {
         />
       </Popover.Target>
       <Popover.Dropdown style={{zIndex: 999}}>
-        <ListingDetails listing={listing} />
+        {children}
       </Popover.Dropdown>
     </Popover>
   );

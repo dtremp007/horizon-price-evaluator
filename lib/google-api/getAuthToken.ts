@@ -1,6 +1,6 @@
 import { google } from 'googleapis'
 
-export const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+export const SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 export async function getAuthToken() {
   if (typeof window !== 'undefined') {

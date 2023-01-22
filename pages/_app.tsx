@@ -4,7 +4,7 @@ import { MantineProvider } from "@mantine/core";
 import AdminDashboard from "../src/layouts/AdminDashboard";
 import useUser from "../lib/auth/useUser";
 import { Router, useRouter } from "next/router";
-import { FilterProvider } from "../src/listings/filter-context/FilterContext";
+import { FilterProvider } from "../src/listings/filters/FilterContext";
 import SpotlightProvider from "../src/search/_SpotlightProvider";
 
 export default function App(props: AppProps) {

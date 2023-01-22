@@ -1,7 +1,7 @@
 import Map, { MapRef, ViewStateChangeEvent } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import { Marker } from "react-map-gl";
-import { useRef, useState, useContext, useEffect, useCallback } from "react";
+import { Marker, Popup } from "react-map-gl";
+import { useRef, useState, useEffect, useCallback } from "react";
 import useSupercluster from "use-supercluster";
 import type { BBox } from "geojson";
 import { Listing } from "../../lib/types/listings";
@@ -9,18 +9,30 @@ import { getAverageCoordinates } from "../../lib/map/get-average-coordinates";
 import ListingMarker from "./ListingMarker/ListingMarker";
 import ListingPopover from "./ListingPopover/ListingPopover";
 import { convertToPrice } from "../../lib/utils/convert-to-price";
-import { excludeKeys } from "../../lib/utils/exclude-key";
-import { Box, Button, UnstyledButton } from "@mantine/core";
+import { ActionIcon, Box, Button, UnstyledButton } from "@mantine/core";
 import { registerSpotlightActions, useSpotlight } from "@mantine/spotlight";
 import getPropertyCaseInsensitive from "../../lib/utils/get-property-case-insensitive";
+import ListingDetails from "./ListingDetails/ListingDetails";
+import AddListingModal from "./AddListingModel/AddListingModal";
+import { IconPlus } from "@tabler/icons";
+import { mutate } from "swr";
+import useFilterContext from "../listings/filters/FilterContext";
+import { useGeoPoints } from "./useGeoPoints";
+import ClusterMarker from "./ClusterMarker/ClusterMarker";
+import { useEventListener, useWindowEvent } from "@mantine/hooks";
 
 const MAP_INITIAL_ZOOM = 10;
-//TODO: Add constraints to how far out use can zoom using turf. Check out this page https://visgl.github.io/react-map-gl/docs/get-started/state-management
-//TODO: Produce a popup, when a listing is pressed. Also, make better icons.
-
-type MapViewProps = {
-  listings: Listing[];
+export const MAP_STYLES = {
+  Street: "mapbox://styles/mapbox/streets-v11",
+  Satellite: "mapbox://styles/mapbox/satellite-streets-v12",
 };
+
+/**
+ * TODO:
+ * - Create a usePoints hook that takes in listings and returns points.
+ * - Moved mutating logic to AddListingModal.
+ * - Try to get satellite view
+ */
 
 /**
  * Takes in an array of listings.
@@ -31,7 +43,7 @@ type MapViewProps = {
  *
  * @see https://morioh.com/p/4e3a9a52a0c8 for how I got most of this function.
  */
-const MapView = ({ listings }: MapViewProps) => {
+const MapView = ({ listings }: { listings: Listing[] }) => {
   const mapRef = useRef<MapRef>(null);
   const [latitude, longitude] = getAverageCoordinates(listings);
   const [viewport, setViewport] = useState({
@@ -39,7 +51,25 @@ const MapView = ({ listings }: MapViewProps) => {
     longitude,
     zoom: MAP_INITIAL_ZOOM,
   });
+  const { category, mapStyle } = useFilterContext();
   const [activeMarker, setActiveMarker] = useState(0);
+  const [createListing, setCreateListing] = useState({
+    active: false,
+    modalOpen: false,
+    lat: 0,
+    lng: 0,
+  });
+  const resetCreateListing = () => {
+    setCreateListing((prev) => ({
+      ...prev,
+      active: false,
+      modalOpen: false,
+    }));
+  };
+
+  useWindowEvent("keydown", (event) => {
+    if (event.key === "Escape") resetCreateListing();
+  });
 
   const safeEaseTo = useCallback(
     (options: mapboxgl.EaseToOptions) => {
@@ -74,23 +104,7 @@ const MapView = ({ listings }: MapViewProps) => {
     }
   }, [listings]);
 
-  const points = listings.map((listing) => {
-    const { lat, lng } = listing;
-
-    return {
-      type: "Feature",
-      properties: {
-        cluster: false,
-        listingId: listing.id || Math.random(),
-        category: listing.category || "No category",
-        price: listing.price,
-      },
-      geometry: {
-        type: "Point",
-        coordinates: [lng, lat],
-      },
-    };
-  });
+  const points = useGeoPoints(listings, { filterBy: category });
 
   const bounds = mapRef.current
     ? (mapRef.current.getMap().getBounds().toArray().flat() as BBox)
@@ -107,7 +121,7 @@ const MapView = ({ listings }: MapViewProps) => {
     <Map
       style={{ width: "100%", height: "100%" }}
       reuseMaps
-      mapStyle="mapbox://styles/mapbox/streets-v9"
+      mapStyle={mapStyle}
       mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
       ref={mapRef}
       maxZoom={17}
@@ -117,75 +131,114 @@ const MapView = ({ listings }: MapViewProps) => {
         // Check if user was holding down cmd or ctrl
         if (e.originalEvent.ctrlKey || e.originalEvent.metaKey) {
           e.preventDefault();
-          console.log(e.lngLat);
+
+          setCreateListing({
+            active: true,
+            modalOpen: false,
+            lat: e.lngLat.lat,
+            lng: e.lngLat.lng,
+          });
         }
       }}
       {...viewport}
     >
-      {clusters.map((cluster, index) => {
-        const [longitude, latitude] = cluster.geometry.coordinates;
-        const { cluster: isCluster, point_count: pointCount } =
-          cluster.properties;
-        const listingId = cluster.properties.listingId;
+      <>
+        {clusters.map((cluster, index) => {
+          const [longitude, latitude] = cluster.geometry.coordinates;
+          const { cluster: isCluster, point_count: pointCount } =
+            cluster.properties;
+          const listingId = cluster.properties.listingId;
 
-        if (isCluster) {
+          if (isCluster) {
+            return (
+              <Marker
+                key={`cluster-${cluster.id}`}
+                latitude={latitude}
+                longitude={longitude}
+              >
+                <ClusterMarker
+                  variant={mapStyle === MAP_STYLES.Satellite ? "light" : "dark"}
+                  label={pointCount}
+                  diameter={30 + (pointCount / points.length) * 20}
+                  onClick={() => {
+                    const expansionZoom = Math.min(
+                      supercluster.getClusterExpansionZoom(cluster.id),
+                      20
+                    );
+
+                    mapRef.current?.easeTo({
+                      center: [longitude, latitude],
+                      zoom: expansionZoom,
+                    });
+                  }}
+                />
+              </Marker>
+            );
+          }
+
           return (
             <Marker
-              key={`cluster-${cluster.id}`}
+              key={`listing-${listingId}`}
               latitude={latitude}
               longitude={longitude}
+              onClick={() => setActiveMarker(index)}
+              style={{ zIndex: activeMarker === index ? 1 : 0 }}
             >
-              <Box
-                sx={(theme) => ({
-                  width: `${20 + (pointCount / points.length) * 20}px`,
-                  height: `${20 + (pointCount / points.length) * 20}px`,
-                  backgroundColor: theme.colors.dark[9],
-                  padding: theme.spacing.xs,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  borderRadius: "50%",
-                  "&:hover": {
-                    cursor: "pointer",
-                    transform: "scale(1.1)",
-                  },
-                })}
-                onClick={() => {
-                  const expansionZoom = Math.min(
-                    supercluster.getClusterExpansionZoom(cluster.id),
-                    20
-                  );
-
-                  mapRef.current?.easeTo({
-                    center: [longitude, latitude],
-                    zoom: expansionZoom,
-                  });
-                }}
+              <ListingPopover
+                markerProps={{ text: convertToPrice(cluster.properties.price) }}
               >
-                {pointCount}
-              </Box>
+                <ListingDetails
+                  listing={
+                    listings.find((listing) => listing.id === listingId)!
+                  }
+                  hiddenProperties={[
+                    "title",
+                    "lat",
+                    "lng",
+                    "id",
+                    "thumbnail",
+                    "url",
+                  ]}
+                />
+              </ListingPopover>
             </Marker>
           );
-        }
+        })}
 
-        return (
-          <Marker
-            key={`listing-${listingId}`}
-            latitude={latitude}
-            longitude={longitude}
-            onClick={() => setActiveMarker(index)}
-            style={{ zIndex: activeMarker === index ? 1 : 0 }}
-          >
-            <ListingPopover
-              markerProps={{ text: convertToPrice(cluster.properties.price) }}
-              listing={excludeKeys(
-                listings.find((listing) => listing.id === listingId)!,
-                ["lat", "lng", "id", "coordinates"]
-              )}
-            />
+        {/* Everything below this is for adding listings */}
+
+        {createListing.active && (
+          <Marker latitude={createListing.lat} longitude={createListing.lng}>
+            <>
+              <ActionIcon
+                variant="filled"
+                onClick={() =>
+                  setCreateListing((prev) => ({ ...prev, modalOpen: true }))
+                }
+              >
+                <IconPlus />
+              </ActionIcon>
+              <AddListingModal
+                lat={createListing.lat}
+                lng={createListing.lng}
+                opened={createListing.modalOpen}
+                onClose={() =>
+                  setCreateListing((prev) => ({
+                    ...prev,
+                    modalOpen: false,
+                    active: false,
+                  }))
+                }
+                onSave={(listing) => {
+                  mutate("/api/listings", listings.concat(listing), {
+                    revalidate: false,
+                  });
+                }}
+              />
+            </>
           </Marker>
-        );
-      })}
+        )}
+      </>
     </Map>
   );
 };
