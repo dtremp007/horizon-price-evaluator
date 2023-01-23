@@ -33,5 +33,5 @@ export function useGeoPoints(
           },
         };
       });
-  }, [listings]);
+  }, [listings, filterBy]);
 }

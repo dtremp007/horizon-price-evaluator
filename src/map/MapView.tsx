@@ -5,7 +5,7 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import useSupercluster from "use-supercluster";
 import type { BBox } from "geojson";
 import { Listing } from "../../lib/types/listings";
-import { getAverageCoordinates } from "../../lib/map/get-average-coordinates";
+import { getAverageCoordinates, getMedianCoordinates } from "../../lib/map/get-average-coordinates";
 import ListingMarker from "./ListingMarker/ListingMarker";
 import ListingPopover from "./ListingPopover/ListingPopover";
 import { convertToPrice } from "../../lib/utils/convert-to-price";
@@ -19,12 +19,25 @@ import { mutate } from "swr";
 import useFilterContext from "../listings/filters/FilterContext";
 import { useGeoPoints } from "./useGeoPoints";
 import ClusterMarker from "./ClusterMarker/ClusterMarker";
-import { useEventListener, useWindowEvent } from "@mantine/hooks";
+import {
+  useEventListener,
+  useLocalStorage,
+  useWindowEvent,
+} from "@mantine/hooks";
 
 const MAP_INITIAL_ZOOM = 10;
 export const MAP_STYLES = {
   Street: "mapbox://styles/mapbox/streets-v11",
   Satellite: "mapbox://styles/mapbox/satellite-streets-v12",
+};
+
+const getInitialViewport = (listings: Listing[]) => {
+    const [lat, lng] = getMedianCoordinates(listings);
+    return {
+        latitude: lat,
+        longitude: lng,
+        zoom: MAP_INITIAL_ZOOM,
+    };
 };
 
 /**
@@ -45,13 +58,15 @@ export const MAP_STYLES = {
  */
 const MapView = ({ listings }: { listings: Listing[] }) => {
   const mapRef = useRef<MapRef>(null);
-  const [latitude, longitude] = getAverageCoordinates(listings);
-  const [viewport, setViewport] = useState({
-    latitude,
-    longitude,
-    zoom: MAP_INITIAL_ZOOM,
+  const [viewport, setViewport] = useLocalStorage({
+    key: "map-view",
+    defaultValue: getInitialViewport(listings),
   });
-  const { category, mapStyle } = useFilterContext();
+  const [mapStyle, setMapStyle] = useLocalStorage({
+    key: "map-style",
+    defaultValue: MAP_STYLES.Street,
+  });
+  const { category } = useFilterContext();
   const [activeMarker, setActiveMarker] = useState(0);
   const [createListing, setCreateListing] = useState({
     active: false,
@@ -186,6 +201,7 @@ const MapView = ({ listings }: { listings: Listing[] }) => {
             >
               <ListingPopover
                 markerProps={{ text: convertToPrice(cluster.properties.price) }}
+                maw={300}
               >
                 <ListingDetails
                   listing={

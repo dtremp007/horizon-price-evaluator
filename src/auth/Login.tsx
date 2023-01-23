@@ -55,15 +55,25 @@ export function LoginForm() {
           })}
         >
           <Flex direction="column" gap="md">
-            <TextInput label="Email" {...form.getInputProps("email")} />
+            <TextInput
+              label="Email/Name"
+              required
+              {...form.getInputProps("email")}
+            />
             <TextInput
               label={
-                <Flex justify="space-between" align="center" >
+                <Flex justify="space-between" align="center">
                   <Text>Invite Code</Text>
-                  <Popover width={200} position="top" withArrow shadow="md" opened={opened}>
+                  <Popover
+                    width={200}
+                    position="top"
+                    withArrow
+                    shadow="md"
+                    opened={opened}
+                  >
                     <Popover.Target>
                       <ActionIcon onMouseEnter={open} onMouseLeave={close}>
-                        <IconHelp size={16}/>
+                        <IconHelp size={16} />
                       </ActionIcon>
                     </Popover.Target>
                     <Popover.Dropdown>
@@ -72,6 +82,7 @@ export function LoginForm() {
                   </Popover>
                 </Flex>
               }
+              required
               {...form.getInputProps("inviteCode")}
             />
             <Button type="submit" loading={loading}>

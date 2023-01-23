@@ -7,16 +7,21 @@ import {
   CopyButton,
   Divider,
   Flex,
+  Loader,
   Popover,
+  Select,
   Text,
   TextInput,
   Title,
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useLocalStorage } from "@mantine/hooks";
 import { IconCheck, IconClipboard, IconHelp, IconShare } from "@tabler/icons";
 import Cookies from "js-cookie";
+import { useEffect, useState } from "react";
+import { apiFetch } from "../../lib/utils/api-fetch";
 import { buildLink } from "../../lib/utils/build-link";
+import { SheetData } from "../api/spreadsheet";
 
 export default function Settings() {
   const form = useForm({
@@ -26,6 +31,41 @@ export default function Settings() {
     },
   });
   const [opened, { open, close }] = useDisclosure(false);
+  const [sheetData, setSheetData] = useLocalStorage<SheetData[]>({
+    key: "sheetData",
+    defaultValue: [],
+    getInitialValueInEffect: false
+  });
+  const [fetchingSheetData, setFetchingSheetData] = useState(false);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (sheetData.length === 0 && form.values.spreadsheetLink) {
+      setFetchingSheetData(true);
+      apiFetch(
+        `/api/spreadsheet?${new URLSearchParams({
+          spreadsheetLink: form.values.spreadsheetLink,
+        })}`,
+        {
+          method: "GET",
+        }
+      )
+        .then((res) => {
+          if (!res.ok) {
+            res.json().then((data) => setError(data.message));
+          } else {
+            res.json().then((data) => setSheetData(data));
+            setError("");
+          }
+        })
+        .catch((err) => {
+          setError(err.message);
+        })
+        .finally(() => {
+          setFetchingSheetData(false);
+        });
+    }
+  }, [form.values.spreadsheetLink]);
 
   return (
     <Flex
@@ -68,12 +108,15 @@ export default function Settings() {
               )}
             </CopyButton>
           </Box>
-          <Text>The spreadsheet should at least have these columns: id, category, lat, lng.</Text>
+          <Text>
+            The spreadsheet should at least have these columns: id, category,
+            lat, lng.
+          </Text>
           <TextInput
             label="Paste spreadsheet link in here."
             {...form.getInputProps("spreadsheetLink")}
           />
-          <TextInput
+          {/* <TextInput
             label={
               <Flex justify="space-between" align="center">
                 <Text>Sheet Range</Text>
@@ -101,20 +144,35 @@ export default function Settings() {
             }
             placeholder="Sheet1!A1:G"
             {...form.getInputProps("range")}
-          />
+          /> */}
+          <Flex>
+            <Select
+              label={
+                <span>
+                  Sheet Name {fetchingSheetData && <Loader size="xs" />}
+                </span>
+              }
+              error="This is an error"
+              data={sheetData.map((sheet) => sheet.name)}
+              {...form.getInputProps("range")}
+            />
+          </Flex>
           <Button type="submit">Apply</Button>
         </Flex>
       </form>
       <Divider label={<Title order={3}>Share This Page</Title>} />
       <Flex direction="column" align="flex-start">
-            <Text>Whoever uses this link will use the same spreadsheet.</Text>
+        <Text>Whoever uses this link will use the same spreadsheet.</Text>
         <CopyButton value={buildLink(form.values)}>
           {({ copied, copy }) => (
-            <Button color={copied ? "green" : "blue"} onClick={copy} leftIcon={<IconShare />}>
+            <Button
+              color={copied ? "green" : "blue"}
+              onClick={copy}
+              leftIcon={<IconShare />}
+            >
               {copied ? "Copied" : "Copy url"}
             </Button>
           )}
-
         </CopyButton>
       </Flex>
     </Flex>

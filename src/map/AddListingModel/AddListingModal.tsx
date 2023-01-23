@@ -1,10 +1,24 @@
-import { Modal, Select, TextInput, Button, Flex } from "@mantine/core";
+import { Modal, Select, TextInput, Button, Flex, Text } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { Listing } from "../../../lib/types/listings";
 import { v4 as uuidv4 } from "uuid";
 import useFilterContext from "../../listings/filters/FilterContext";
 import { apiFetch } from "../../../lib/utils/api-fetch";
 import { useState } from "react";
+import { useLocalStorage } from "@mantine/hooks";
+import { SheetData } from "../../../pages/api/spreadsheet";
+import { resolveDataStructure } from "../../../lib/spreadsheet/resolve-data-structure";
+import { useResolverFunction } from "./use-resolver-function";
+
+const CRUCIAL_FIELDS = [
+  "id",
+  "title",
+  "price",
+  "lat",
+  "lng",
+  "category",
+  "date_scraped",
+] as (keyof Listing)[];
 
 export interface AddListingModalProps {
   lat: number;
@@ -23,6 +37,12 @@ const AddListingModal = ({
 }: AddListingModalProps) => {
   const { availableCategories } = useFilterContext();
   const [uploading, setUploading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [sheetData, setSheetData] = useLocalStorage<SheetData[]>({
+    key: "sheetData",
+    defaultValue: [],
+  });
+  const resolve = useResolverFunction({ crucialKeys: CRUCIAL_FIELDS });
 
   const form = useForm<Listing>({
     initialValues: {
@@ -44,14 +64,28 @@ const AddListingModal = ({
       <form
         onSubmit={form.onSubmit((values) => {
           setUploading(true);
-          apiFetch("/api/listings", {
-            method: "POST",
-            body: JSON.stringify(values),
-          }).then((res) => {
-            onSave(values);
+          setError(null);
+
+          try {
+            const data = resolve(values);
+
+            apiFetch("/api/listings", {
+              method: "POST",
+              body: JSON.stringify(data),
+            }).then((res) => {
+              if (!res.ok) {
+                setUploading(false);
+                res.json().then((data) => setError(data.message));
+                return;
+              }
+              onSave(values);
+              setUploading(false);
+              onClose();
+            });
+          } catch (error) {
+            setError((error as Error).message);
             setUploading(false);
-            onClose();
-          });
+          }
         })}
       >
         <Flex direction="column">
@@ -85,9 +119,12 @@ const AddListingModal = ({
             name="campo"
             {...form.getInputProps("campo")}
           />
-          <Button type="submit" sx={{ alignSelf: "flex-end" }} loading={uploading}>
-            Save
-          </Button>
+          <Flex justify="space-between">
+            <Text color="red">{error}</Text>
+            <Button type="submit" loading={uploading}>
+              Save
+            </Button>
+          </Flex>
         </Flex>
       </form>
     </Modal>

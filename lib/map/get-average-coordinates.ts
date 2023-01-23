@@ -11,3 +11,11 @@ export function getAverageCoordinates(listings: Listing[]): [number, number] {
 
     return [averageLat, averageLng]
 }
+
+export function getMedianCoordinates(listings: Listing[]): [number, number] {
+    // Get the average lat and lng
+    const medianLat = listings.sort((a, b) => a.lat - b.lat)[Math.floor(listings.length / 2)].lat
+    const medianLng = listings.sort((a, b) => a.lng - b.lng)[Math.floor(listings.length / 2)].lng
+
+    return [medianLat, medianLng]
+}

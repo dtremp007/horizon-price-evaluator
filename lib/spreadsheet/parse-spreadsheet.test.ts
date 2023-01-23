@@ -7,7 +7,8 @@ describe("parseSpreadsheet", () => {
       ["alice", 30],
       ["bob", 40],
     ]
-    const result = parseSpreadsheet(spreadsheet)
+    const [header, ...data] = spreadsheet
+    const result = parseSpreadsheet(data, header as string[])
     expect(result).toEqual([
       { name: "alice", age: 30 },
       { name: "bob", age: 40 },

@@ -9,19 +9,18 @@ export type FilterContextType = {
   availableCategories: string[];
   search: string;
   setSearch: (search: string) => void;
-    mapStyle: string;
-  setMapStyle: (mapStyle: string) => void;
 };
 
 const FilterContext = createContext<FilterContextType>({} as FilterContextType);
 
 export function FilterProvider({ children }: { children: React.ReactNode }) {
   const { user } = useUser();
-  const {listings} = useListings(!!user);
+  const { listings } = useListings(!!user);
   const [category, _setCategory] = useState<string>("ALL");
-  const [availableCategories, setAvailableCategories] = useState(getCategories(listings));
+  const [availableCategories, setAvailableCategories] = useState(
+    getCategories(listings)
+  );
   const [search, _setSearch] = useState("");
-  const [mapStyle, _setMapStyle] = useState("mapbox://styles/mapbox/streets-v11");
 
   useEffect(() => {
     setAvailableCategories(getCategories(listings));
@@ -30,10 +29,6 @@ export function FilterProvider({ children }: { children: React.ReactNode }) {
   const setCategory = (category: string) => {
     _setCategory(category);
   };
-
-  const setMapStyle = (mapStyle: string) => {
-    _setMapStyle(mapStyle);
-    };
 
   const setSearch = (search: string) => {
     _setSearch(search);
@@ -47,8 +42,6 @@ export function FilterProvider({ children }: { children: React.ReactNode }) {
         availableCategories,
         search,
         setSearch,
-        mapStyle,
-        setMapStyle,
       }}
     >
       {children}

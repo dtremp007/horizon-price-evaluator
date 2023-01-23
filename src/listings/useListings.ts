@@ -12,7 +12,9 @@ const fetcher = async (url: string) => {
 };
 
 export function useListings(shouldFetch: boolean = true) {
-  const { data, error } = useSWR<Listing[]>(shouldFetch ? '/api/listings' : null, fetcher)
+  const { data, error } = useSWR<Listing[]>(shouldFetch ? '/api/listings' : null, fetcher, {
+    revalidateOnFocus: false,
+  })
 
   return {
     listings: data,

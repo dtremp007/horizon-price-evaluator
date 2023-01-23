@@ -8,11 +8,16 @@ import { sessionOptions } from "../../lib/auth/session";
 import { parseSpreadsheet } from "../../lib/spreadsheet/parse-spreadsheet";
 import { transformHeader } from "../../lib/spreadsheet/transform-header";
 
-type Data = {
-  message?: string;
-} | Listing[];
+export type SheetData = {
+  name: string;
+  headerRow?: string[];
+};
 
-async function handleAppend(req: NextApiRequest, res: NextApiResponse<Data>) {
+type SheetDataResponse = {
+    message?: string;
+} | SheetData[];
+
+async function handleAppend(req: NextApiRequest, res: NextApiResponse<SheetDataResponse>) {
   if (!req.session.user) {
     res.status(401).json({ message: "You are not logged in." });
   } else {
@@ -20,46 +25,38 @@ async function handleAppend(req: NextApiRequest, res: NextApiResponse<Data>) {
       const auth = await getAuthToken();
       const sheets = google.sheets({ version: "v4", auth });
 
-      const spreadsheetId = getSheetIdFromLink(req.cookies.spreadsheetLink);
-      const range = req.cookies.range;
+      const spreadsheetId = getSheetIdFromLink((req.query.spreadsheetLink as string) || req.cookies.spreadsheetLink);
 
       if (!spreadsheetId) {
         throw new Error("No spreadsheet id found.");
       }
 
-      if (!range) {
-        throw new Error("No range specified.");
-      }
-
       if (req.method === "GET") {
-        const response = await sheets.spreadsheets.values.get({
+        const sheetNames = await (
+          await sheets.spreadsheets.get({ spreadsheetId })
+        ).data.sheets?.map((sheet) => sheet.properties?.title);
+
+        const ranges = sheetNames?.map((sheet) => `${sheet}!1:1`);
+
+        const response = await sheets.spreadsheets.values.batchGet({
           spreadsheetId,
-          range,
+          ranges,
         });
 
-        if (!response.data.values) {
-          throw new Error("No data found.");
+        const headerRows = response.data.valueRanges?.map(
+          (range) => range.values?.[0]
+        );
+
+        const sheetData = sheetNames?.map((name, index) => ({
+            name: name as string,
+            headerRow: headerRows?.[index]
+        }));
+
+        if (!sheetData) {
+            throw new Error("No sheet data found.");
         }
-        const [header, ...data] = response.data.values;
 
-        const listings = parseSpreadsheet<Listing>(data, transformHeader(header));
-
-        res.status(200).json(listings);
-      }
-
-      if (req.method === "POST") {
-        const body = JSON.parse(req.body);
-
-        const response = await sheets.spreadsheets.values.append({
-          spreadsheetId,
-          range,
-          valueInputOption: "USER_ENTERED",
-          requestBody: {
-            values: body,
-          },
-        });
-
-        res.status(response.status).json({ message: response.statusText });
+        res.status(200).json(sheetData);
       }
     } catch (error) {
       console.log(error);

@@ -1,10 +1,15 @@
 import { Flex, SegmentedControl, Select, Text } from "@mantine/core";
+import { useLocalStorage } from "@mantine/hooks";
 import { MAP_STYLES } from "../../map/MapView";
 import useFilterContext from "./FilterContext";
 
 export default function ListingFilters() {
-  const { category, setCategory, availableCategories, mapStyle, setMapStyle } =
-    useFilterContext();
+  const { category, setCategory, availableCategories } = useFilterContext();
+
+  const [mapStyle, setMapStyle] = useLocalStorage({
+    key: "map-style",
+    defaultValue: MAP_STYLES.Street,
+  });
 
   return (
     <Flex direction="column">
