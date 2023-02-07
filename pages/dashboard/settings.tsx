@@ -40,7 +40,7 @@ export default function Settings() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    if (sheetData.length === 0 && form.values.spreadsheetLink) {
+    if (form.values.spreadsheetLink) {
       setFetchingSheetData(true);
       apiFetch(
         `/api/spreadsheet?${new URLSearchParams({

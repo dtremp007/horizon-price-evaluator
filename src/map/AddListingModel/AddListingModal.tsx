@@ -18,6 +18,7 @@ const CRUCIAL_FIELDS = [
   "lng",
   "category",
   "date_scraped",
+  "size",
 ] as (keyof Listing)[];
 
 export interface AddListingModalProps {
@@ -56,6 +57,7 @@ const AddListingModal = ({
       category: "lote",
       campo: "",
       date_scraped: new Date().toISOString().slice(0, 10),
+      size: "",
     },
   });
 
@@ -118,6 +120,11 @@ const AddListingModal = ({
             label="Campo"
             name="campo"
             {...form.getInputProps("campo")}
+          />
+          <TextInput
+            label="Size"
+            name="size"
+            {...form.getInputProps("size")}
           />
           <Flex justify="space-between">
             <Text color="red">{error}</Text>

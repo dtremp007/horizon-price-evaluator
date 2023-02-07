@@ -10,4 +10,5 @@ export type Listing = {
     thumbnail?: string;
     campo?: string;
     date_scraped?: string;
+    size?: string;
 }

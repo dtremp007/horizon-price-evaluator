@@ -32,6 +32,15 @@ export function headerRowIntersection(
  */
 export function createAlignFunction(mold: string[], clay: string[]) {
   clay = clay.map((key) => key.toLowerCase());
+  /**
+   * An array of indexes that correspond to the mold.
+   * Example:
+   * ```
+   * mold = ["id", "title", "price"]
+   * clay = ["title", "id", "price", "category"]
+   * alignmentKeys = [1, 0, 2]
+   * ```
+   */
   const alignmentKeys = mold.map((key) => clay.indexOf(key.toLowerCase()));
 
   const align = (row: any[]) => {
@@ -78,6 +87,7 @@ export function resolveDataStructure<T extends Record<string, any>>(
     return formatData(dataset, dataStructure);
   }
 
+  /** The elements common to both the mold and the dataHeaderRow */
   const intersection = headerRowIntersection(mold, dataHeaderRow);
   const align = createAlignFunction(mold, dataHeaderRow);
 
